@@ -1,0 +1,25 @@
+import 'package:flutter/material.dart';
+import 'package:partner_app/theme/themes.dart';
+
+// your routes
+import 'core/routes/app_routes.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp.router(
+      title: 'Bogo',
+      debugShowCheckedModeBanner: false,
+      themeMode: ThemeMode.system,
+      theme: BAppTheme.lightTheme,
+      darkTheme: BAppTheme.darkTheme,
+      routerConfig: AppRouter.router, // your go_router config
+    );
+  }
+}
