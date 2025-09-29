@@ -68,10 +68,6 @@ class PSizes {
   static const double spaceBtwSectionsLg = 180.0;
   static const double spaceBtwSectionsXLg = 280.0;
 
-  /// static const double spaceBtwSectionsLg = 130.0;
-  /// static const double spaceBtwSectionsXLg = 180.0;
-  /// static const double spaceBtwSectionsEXLg = 280.0;
-
   // Border Radius
   static const double borderRadiusXSm = 12.0;
   static const double borderRadiusSm = 14.0;

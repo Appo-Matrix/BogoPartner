@@ -49,7 +49,7 @@ class WelcomeScreen extends StatelessWidget {
                 Align(
                   alignment: Alignment.centerRight,
                   child: Padding(
-                    padding: EdgeInsets.only(right: PSizes.spaceBtwSectionsMd),
+                    padding: EdgeInsets.only(right: PSizes.spaceBtwSectionsLg),
                     child: Container(
                       height: PSizes.size220,
                       width: PSizes.imageCarouselHeight,
