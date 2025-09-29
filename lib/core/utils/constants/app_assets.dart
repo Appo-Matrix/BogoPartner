@@ -5,6 +5,7 @@ class PImages {
   static const String laptopGuy = "assets/images/laptop_guy.png";
   static const String partner = "assets/images/partner.png";
   static const String verifiedIcon = "assets/images/verified_icon.png";
+
   static const String home = "assets/icons/home.png";
   static const String hotel = "assets/icons/hotel.png";
   static const String house = "assets/icons/house.png";
@@ -19,6 +20,9 @@ class PImages {
   static const String photo = "assets/icons/photo.png";
   static const String time = "assets/icons/time.png";
   static const String doc = "assets/icons/docs.png";
+
+  static const String logo = "assets/icons/logo.png";
+
   static const String ai = "assets/icons/logoAi.png";
   static const String pending = "assets/images/pending.png";
   static const String loading = "assets/icons/loading.png";
@@ -37,6 +41,7 @@ class PImages {
 
 
   // Icons
+
   static const String email = "assets/icons/email.svg";
   static const String name = "assets/icons/name.svg";
   static const String sport = "assets/icons/sport.svg";
@@ -52,11 +57,8 @@ class PImages {
   static const String lock2 = "assets/icons/lock2.svg";
   static const String obscureIcon = "assets/icons/obscure_icon.svg";
 
+
   // Store images
 
-
   // filter category images
-
-
-
 }

@@ -8,6 +8,8 @@ class SplashScreen extends StatefulWidget {
   final String nextLocation;
 
   const SplashScreen({super.key, this.nextLocation = '/loginScreen'});
+=======
+  const SplashScreen({super.key, this.nextLocation = '/businessDetailsFormScreen'});
 
   @override
   State<SplashScreen> createState() => _SplashScreenState();

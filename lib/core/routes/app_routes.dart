@@ -1,4 +1,3 @@
-
 import 'package:go_router/go_router.dart';
 import 'package:partner_app/features/auth/screens/login_screen.dart';
 import 'package:partner_app/features/auth/screens/otp_verification_done_screen.dart';
@@ -31,6 +30,7 @@ class AppRouter {
             NavigationHelper.slideFromRight(const SplashScreen(), state),
       ),
       GoRoute(
+
         path: '/loginScreen',
         pageBuilder: (context, state) =>
             NavigationHelper.slideFromRight(const LoginScreen(), state),
@@ -77,6 +77,7 @@ class AppRouter {
             NavigationHelper.slideFromRight(const SplashScreen(), state),
       ),
       GoRoute(
+
         path: '/businessDetailsFormScreen',
         pageBuilder: (context, state) =>
             NavigationHelper.slideFromRight(const BusinessDetailsFormScreen(), state),

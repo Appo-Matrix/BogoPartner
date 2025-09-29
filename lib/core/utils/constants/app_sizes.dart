@@ -34,6 +34,9 @@ class PSizes {
   static const double buttonWidthXSm = 120.0;
   static const double buttonRadius = 24.0;
   static const double buttonWidth = 340.0;
+  static const double buttonHeight = 18.0;
+  static const double buttonRadius = 12.0;
+  static const double buttonWidth = 120.0;
   static const double buttonWidths = 80.0;
   static const double buttonElevation = 4.0;
 
