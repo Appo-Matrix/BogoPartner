@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:partner_app/core/utils/constants/app_assets.dart';
+import 'package:partner_app/core/utils/constants/app_sizes.dart';
 import '../../core/utils/constants/app_colors.dart';
 
 class SplashScreen extends StatefulWidget {
   final String nextLocation;
 
+  const SplashScreen({super.key, this.nextLocation = '/loginScreen'});
+=======
   const SplashScreen({super.key, this.nextLocation = '/businessDetailsFormScreen'});
 
   @override
