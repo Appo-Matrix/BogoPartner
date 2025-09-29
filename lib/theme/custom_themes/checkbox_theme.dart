@@ -1,52 +1,47 @@
-
-
 import 'package:flutter/material.dart';
-
 import '../../core/utils/constants/app_colors.dart';
 import '../../core/utils/constants/app_sizes.dart';
 
-
-class BCheckBoxTheme{
+class BCheckBoxTheme {
   BCheckBoxTheme._();
 
-
-
-  /// Customizable Light Text Theme
+  /// Light Checkbox Theme
   static CheckboxThemeData lightCheckboxTheme = CheckboxThemeData(
-
-    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(PSizes.xs)),
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(PSizes.xs),
+    ),
+    side: const BorderSide(color: PAppColors.gray400, width: 1.5),
     checkColor: MaterialStateProperty.resolveWith((states) {
       if (states.contains(MaterialState.selected)) {
-        return PAppColors.white;
-      } else {
-        return PAppColors.black900;
+        return Colors.white;
       }
+      return PAppColors.gray600;
     }),
     fillColor: MaterialStateProperty.resolveWith((states) {
       if (states.contains(MaterialState.selected)) {
-        return PAppColors.primary;
-      } else {
-        return Colors.transparent;
+        return PAppColors.primary500;
       }
+      return Colors.transparent;
     }),
   );
 
-  /// Customizable Dark Text Theme
+  /// Dark Checkbox Theme
   static CheckboxThemeData darkCheckboxTheme = CheckboxThemeData(
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(PSizes.xs),
+    ),
+    side: const BorderSide(color: PAppColors.gray500, width: 1.5),
     checkColor: MaterialStateProperty.resolveWith((states) {
       if (states.contains(MaterialState.selected)) {
-        return PAppColors.white;
-
-      } else {
-        return PAppColors.black900;
+        return Colors.white;
       }
+      return PAppColors.gray300;
     }),
     fillColor: MaterialStateProperty.resolveWith((states) {
       if (states.contains(MaterialState.selected)) {
-        return PAppColors.primary;
-      } else {
-        return Colors.transparent;
+        return PAppColors.primary400;
       }
+      return Colors.transparent;
     }),
   );
 }

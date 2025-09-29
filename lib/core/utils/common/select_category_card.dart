@@ -28,7 +28,7 @@ class SelectCategoryCard extends StatelessWidget {
             height: 92,
             width: 92,
             decoration: BoxDecoration(
-              color: PAppColors.black900,
+              color: PAppColors.darkGray750,
               borderRadius: BorderRadius.circular(35),
             ),
             child: Center(
@@ -61,7 +61,7 @@ class SelectCategoryCard extends StatelessWidget {
           decoration: BoxDecoration(
             shape: BoxShape.circle,
             border: Border.all(
-              color: selected ? PAppColors.success : PAppColors.black700,
+              color: selected ? PAppColors.success : PAppColors.darkGray750,
               width: 3,
             ),
           ),

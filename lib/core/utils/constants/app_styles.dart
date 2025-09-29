@@ -52,4 +52,5 @@ class PAppStyles {
 
 class AppFontFamilies {
   static String poppins = 'Poppins';
+  static String inter = 'Inter';
 }

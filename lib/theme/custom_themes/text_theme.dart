@@ -4,129 +4,121 @@ import '../../core/utils/constants/app_colors.dart';
 class BTextTheme {
   BTextTheme._();
 
+  /* -- Light Theme -- */
   static TextTheme lightTextTheme = TextTheme(
-    headlineLarge: TextStyle(
+    headlineLarge: const TextStyle(
       fontSize: 32.0,
       fontWeight: FontWeight.bold,
       color: PAppColors.lightGray900,
     ),
-    // Dark color for light theme
-    headlineMedium: TextStyle(
+    headlineMedium: const TextStyle(
       fontSize: 24.0,
       fontWeight: FontWeight.w600,
       color: PAppColors.lightGray900,
     ),
-    // Slightly lighter dark color
-    headlineSmall: TextStyle(
+    headlineSmall: const TextStyle(
       fontSize: 18.0,
       fontWeight: FontWeight.w600,
       color: PAppColors.lightGray900,
     ),
-
-    // Light dark color
-    titleLarge: TextStyle(
+    titleLarge: const TextStyle(
       fontSize: 16.0,
       fontWeight: FontWeight.w600,
       color: PAppColors.lightGray900,
     ),
-    titleMedium: TextStyle(
+    titleMedium: const TextStyle(
       fontSize: 16.0,
       fontWeight: FontWeight.w500,
-      color: PAppColors.lightGray900,
+      color: PAppColors.lightGray800,
     ),
-    titleSmall: TextStyle(
+    titleSmall: const TextStyle(
       fontSize: 16.0,
       fontWeight: FontWeight.w400,
-      color: PAppColors.lightGray900,
+      color: PAppColors.lightGray700,
     ),
-
     bodyLarge: TextStyle(
       fontSize: 14.0,
       fontWeight: FontWeight.w500,
       color: PAppColors.lightGray900,
     ),
-    bodyMedium: TextStyle(
+    bodyMedium: const TextStyle(
       fontSize: 14.0,
       fontWeight: FontWeight.normal,
-      color: PAppColors.white,
+      color: PAppColors.lightGray800,
     ),
     bodySmall: TextStyle(
       fontSize: 14.0,
-      fontWeight: FontWeight.w500,
-      color: PAppColors.lightGray900.withOpacity(0.5),
+      fontWeight: FontWeight.w400,
+      color: PAppColors.lightGray700.withOpacity(0.8),
     ),
-
-    labelLarge: TextStyle(
+    labelLarge: const TextStyle(
       fontSize: 12.0,
-      fontWeight: FontWeight.normal,
-      color: PAppColors.lightGray900,
+      fontWeight: FontWeight.w500,
+      color: PAppColors.lightGray800,
     ),
     labelMedium: TextStyle(
       fontSize: 12.0,
       fontWeight: FontWeight.normal,
-      color: PAppColors.lightGray900.withOpacity(0.5),
+      color: PAppColors.lightGray600.withOpacity(0.9),
     ),
   );
 
+  /* -- Dark Theme -- */
   static TextTheme darkTextTheme = TextTheme(
-    headlineLarge: TextStyle(
+    headlineLarge: const TextStyle(
       fontSize: 32.0,
       fontWeight: FontWeight.bold,
-      color: PAppColors.white,
+      color: Colors.white,
     ),
-    // Light color for dark theme
-    headlineMedium: TextStyle(
+    headlineMedium: const TextStyle(
       fontSize: 24.0,
       fontWeight: FontWeight.w600,
-      color: PAppColors.white,
+      color: Colors.white,
     ),
-    headlineSmall: TextStyle(
+    headlineSmall: const TextStyle(
       fontSize: 18.0,
       fontWeight: FontWeight.w600,
-      color: PAppColors.white,
+      color: Colors.white,
     ),
-
-    titleLarge: TextStyle(
+    titleLarge: const TextStyle(
       fontSize: 16.0,
       fontWeight: FontWeight.w600,
-      color: PAppColors.white,
+      color: Colors.white,
     ),
-    titleMedium: TextStyle(
+    titleMedium: const TextStyle(
       fontSize: 16.0,
       fontWeight: FontWeight.w500,
-      color: PAppColors.white,
+      color: PAppColors.gray200,
     ),
-    titleSmall: TextStyle(
+    titleSmall: const TextStyle(
       fontSize: 16.0,
       fontWeight: FontWeight.w400,
-      color: PAppColors.white,
+      color: PAppColors.gray300,
     ),
-
-    bodyLarge: TextStyle(
+    bodyLarge: const TextStyle(
       fontSize: 14.0,
       fontWeight: FontWeight.w500,
-      color: PAppColors.white,
+      color: Colors.white,
     ),
-    bodyMedium: TextStyle(
+    bodyMedium: const TextStyle(
       fontSize: 14.0,
       fontWeight: FontWeight.normal,
-      color: PAppColors.white,
+      color: PAppColors.gray200,
     ),
-    bodySmall: TextStyle(
+    bodySmall: const TextStyle(
       fontSize: 14.0,
+      fontWeight: FontWeight.w400,
+      color: PAppColors.gray400,
+    ),
+    labelLarge: const TextStyle(
+      fontSize: 12.0,
       fontWeight: FontWeight.w500,
-      color: PAppColors.white,
+      color: Colors.white,
     ),
-
-    labelLarge: TextStyle(
+    labelMedium: const TextStyle(
       fontSize: 12.0,
       fontWeight: FontWeight.normal,
-      color: PAppColors.white,
-    ),
-    labelMedium: TextStyle(
-      fontSize: 12.0,
-      fontWeight: FontWeight.normal,
-      color: PAppColors.white,
+      color: PAppColors.gray300,
     ),
   );
 }

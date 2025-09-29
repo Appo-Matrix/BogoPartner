@@ -29,7 +29,7 @@ class WorkingDayRow extends StatelessWidget {
 
     Widget pill(String text, VoidCallback onTap) {
       return Material(
-        color: PAppColors.black800,
+        color: PAppColors.black400,
         borderRadius: radiusPill,
         child: InkWell(
           onTap: onTap, borderRadius: radiusPill,

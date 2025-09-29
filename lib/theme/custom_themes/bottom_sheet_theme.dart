@@ -1,28 +1,32 @@
 import 'package:flutter/material.dart';
-
 import '../../core/utils/constants/app_colors.dart';
-
 
 class BBottomSheetTheme {
   BBottomSheetTheme._();
 
+  /// Light BottomSheet Theme
   static BottomSheetThemeData lightBottomSheetTheme = BottomSheetThemeData(
     showDragHandle: true,
-    backgroundColor: PAppColors.lightGray100, // Light background color
-    modalBackgroundColor: PAppColors.lightGray100, // Light modal background
+    backgroundColor: PAppColors.lightSurface, // lighter sheet surface
+    modalBackgroundColor: PAppColors.lightBackground, // full modal bg
+    dragHandleColor: PAppColors.gray500, // little darker for visibility
+    elevation: 8,
     constraints: const BoxConstraints(minWidth: double.infinity),
-    shape: RoundedRectangleBorder(
-      borderRadius: BorderRadius.circular(16),
+    shape: const RoundedRectangleBorder(
+      borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
     ),
   );
 
+  /// Dark BottomSheet Theme
   static BottomSheetThemeData darkBottomSheetTheme = BottomSheetThemeData(
     showDragHandle: true,
-    backgroundColor: PAppColors.lightGray900, // Dark background color
-    modalBackgroundColor: PAppColors.lightGray900, // Dark modal background
+    backgroundColor: PAppColors.darkSurface, // dark sheet surface
+    modalBackgroundColor: PAppColors.darkBackground, // full modal bg
+    dragHandleColor: PAppColors.gray400, // lighter handle for contrast
+    elevation: 8,
     constraints: const BoxConstraints(minWidth: double.infinity),
-    shape: RoundedRectangleBorder(
-      borderRadius: BorderRadius.circular(16),
+    shape: const RoundedRectangleBorder(
+      borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
     ),
   );
 }

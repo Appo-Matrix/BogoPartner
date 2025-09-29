@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:partner_app/core/utils/constants/app_assets.dart';
+import 'package:partner_app/core/utils/constants/app_sizes.dart';
 import '../../core/utils/constants/app_colors.dart';
 
 class SplashScreen extends StatefulWidget {
   final String nextLocation;
 
-  const SplashScreen({super.key, this.nextLocation = '/businessDetailsFormScreen'});
+  const SplashScreen({super.key, this.nextLocation = '/loginScreen'});
 
   @override
   State<SplashScreen> createState() => _SplashScreenState();
@@ -24,15 +26,20 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: PAppColors.deeper,
+      backgroundColor: PAppColors.darkBackground,
 
       // Body
       body: SafeArea(
         child: Stack(
           children: [
             Center(
-              child: Image.asset("assets/images/app_logo.png", width: 250),
+              child: Image.asset(
+                PImages.logoPartner,
+                width: 250,
+              ),
             ),
+
+            /// Loader at bottom
             Align(
               alignment: Alignment.bottomCenter,
               child: Padding(
@@ -41,7 +48,7 @@ class _SplashScreenState extends State<SplashScreen> {
                   valueColor: const AlwaysStoppedAnimation<Color>(
                     PAppColors.white,
                   ),
-                  strokeWidth: 5,
+                  strokeWidth: 3,
                 ),
               ),
             ),

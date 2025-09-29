@@ -5,7 +5,7 @@ class PSizes {
   static const double md = 16.0;
   static const double mds = 10;
   static const double lg = 24.0;
-  static const double xl = 24.0;
+  static const double xl = 32.0;
 
   // Icon Sizes
   static const double iconXs = 12.0;
@@ -13,6 +13,7 @@ class PSizes {
   static const double iconSms = 22;
   static const double iconMd = 24.0;
   static const double iconLg = 32.0;
+  static const double iconXLg = 64.0;
 
   //Font Size
   static const double fontSizeXESm = 11.0;
@@ -23,29 +24,57 @@ class PSizes {
   static const double fontSizeMd = 16.0;
   static const double fontSizeLg = 18.0;
   static const double fontSizeLgx = 24.0;
+  static const double fontSizeLgx2 = 36.0;
+  static const double fontSizeUL = 44.0;
+  static const double fontSizeUMdLg = 48.0;
 
   // Button Sizes
-  static const double buttonHeight = 18.0;
-  static const double buttonRadius = 12.0;
-  static const double buttonWidth = 120.0;
+  static const double buttonHeight = 70.0;
+  static const double buttonHeightLg = 160.0;
+  static const double buttonWidthXSm = 120.0;
+  static const double buttonRadius = 24.0;
+  static const double buttonWidth = 340.0;
+
   static const double buttonWidths = 80.0;
   static const double buttonElevation = 4.0;
+
+  // Spaces between TextLines
+  static const double paragraphSpacing = 1.2;
+  static const double paragraphSpacingLg = 1.25;
+
+  // TextField Size
+  static const double textFieldHeight = 75;
+  static const double textFieldWidth = double.infinity;
+
+  // Carousel Size
+  static const double cursorHeight = 25;
+  static const double cursorWidth = 1;
 
   // Appbar Height
   static const double appBarHeight = 56.0;
 
   // Image Size
   static const double imageThumbSize = 80.0;
+  static const double imageThumbSizeMd = 112.0;
+  static const double imageThumbSizeLg = 170.0;
+  static const double imageThumbSizeXLg = 320.0;
+  static const double imageThumbSizeULg = 680.0;
 
   // Default Spacing between section
   static const double defaultSpace = 24.0;
   static const double spaceBtwItems = 16.0;
   static const double spaceBtwSections = 32.0;
+  static const double spaceBtwSectionsSm = 96.0;
+  static const double spaceBtwSectionsMd = 130.0;
+  static const double spaceBtwSectionsLg = 180.0;
+  static const double spaceBtwSectionsXLg = 280.0;
 
   // Border Radius
-  static const double borderRadiusSm = 4.0;
-  static const double borderRadiusMd = 8.0;
-  static const double borderRadiusLg = 12.0;
+  static const double borderRadiusXSm = 12.0;
+  static const double borderRadiusSm = 14.0;
+  static const double borderRadiusMd = 16.0;
+  static const double borderRadiusLg = 24.0;
+  static const double borderRadiusXLg = 32.0;
 
   // Divider
   static const double dividerHeight = 1.0;
@@ -60,6 +89,10 @@ class PSizes {
   static const double cardRadiusSm = 10.0;
   static const double cardRadiusXs = 6.0;
   static const double cardElevation = 2.0;
+
+  //extra define container sizes
+  static const double size220 = 220;
+  static const double size380 = 380;
 
   // Image carousal height
   static const double imageCarouselHeight = 200.0;
