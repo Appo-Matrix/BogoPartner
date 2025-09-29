@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:partner_app/theme/themes.dart';
-
-// your routes
 import 'core/routes/app_routes.dart';
 
 void main() {
@@ -19,7 +17,7 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.system,
       theme: BAppTheme.lightTheme,
       darkTheme: BAppTheme.darkTheme,
-      routerConfig: AppRouter.router, // your go_router config
+      routerConfig: AppRouter.router,
     );
   }
 }
