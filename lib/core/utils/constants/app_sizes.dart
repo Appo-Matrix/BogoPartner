@@ -3,12 +3,14 @@ class PSizes {
   static const double xs = 4.0;
   static const double sm = 8.0;
   static const double md = 16.0;
+  static const double mds = 10;
   static const double lg = 24.0;
   static const double xl = 24.0;
 
   // Icon Sizes
   static const double iconXs = 12.0;
   static const double iconSm = 16.0;
+  static const double iconSms = 22;
   static const double iconMd = 24.0;
   static const double iconLg = 32.0;
 
@@ -26,6 +28,7 @@ class PSizes {
   static const double buttonHeight = 18.0;
   static const double buttonRadius = 12.0;
   static const double buttonWidth = 120.0;
+  static const double buttonWidths = 80.0;
   static const double buttonElevation = 4.0;
 
   // Appbar Height

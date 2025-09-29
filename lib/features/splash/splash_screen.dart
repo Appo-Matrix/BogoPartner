@@ -5,7 +5,7 @@ import '../../core/utils/constants/app_colors.dart';
 class SplashScreen extends StatefulWidget {
   final String nextLocation;
 
-  const SplashScreen({super.key, this.nextLocation = '/filterScreen'});
+  const SplashScreen({super.key, this.nextLocation = '/businessDetailsFormScreen'});
 
   @override
   State<SplashScreen> createState() => _SplashScreenState();
