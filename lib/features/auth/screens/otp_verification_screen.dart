@@ -6,7 +6,6 @@ import 'package:partner_app/core/utils/common/widgets/otp_input_field.dart';
 import 'package:partner_app/core/utils/constants/app_colors.dart';
 import 'package:partner_app/core/utils/constants/app_strings.dart';
 import 'package:partner_app/core/utils/constants/app_styles.dart';
-
 import '../../../core/utils/constants/app_assets.dart';
 import '../../../core/utils/constants/app_sizes.dart';
 
@@ -31,12 +30,12 @@ class OtpVerificationScreen extends StatelessWidget {
                     child: Image.asset(PImages.appLogo, width: 250),
                   ),
                 ),
-                SizedBox(height: 2 * PSizes.spaceBtwItems),
+                SizedBox(height: PSizes.spaceBtwSections),
                 Text(
                   AppStrings.otpCodeVerification,
                   style: PAppStyles.heading1.copyWith(
                     color: PAppColors.white,
-                    fontSize: 2 * PSizes.fontSizeLg,
+                    fontSize: PSizes.fontSizeLgx2,
                   ),
                 ),
                 SizedBox(height: PSizes.xs),
@@ -48,7 +47,7 @@ class OtpVerificationScreen extends StatelessWidget {
                       style: PAppStyles.body.copyWith(
                         color: PAppColors.white,
                         fontSize: PSizes.fontSizeLg,
-                        height: 1.2,
+                        height: PSizes.paragraphSpacing,
                       ),
                     ),
                   ),
@@ -58,7 +57,7 @@ class OtpVerificationScreen extends StatelessWidget {
                 SizedBox(height: PSizes.buttonWidth),
                 AppButtons.simple(
                   text: AppStrings.cont,
-                  borderRadius: 2 * PSizes.buttonRadius,
+                  borderRadius: PSizes.fontSizeUMdLg,
                   onTap: () {
                     context.push('/otpVerificationDoneScreen');
                   },

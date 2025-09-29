@@ -171,47 +171,49 @@ class _AppButtonsState extends State<AppButtons> {
   }
 
   Widget _radioSquare(BuildContext context) {
-    return SizedBox(
-      height: PSizes.buttonHeightLg,
-      width: PSizes.buttonWidthXSm,
-      child: Center(
-        child: Column(
-          children: [
-            GestureDetector(
-              onTap: widget.onTap,
-              child: Container(
-                height: PSizes.imageThumbSize,
-                width: PSizes.imageThumbSize,
-                decoration: BoxDecoration(
-                  color: widget.buttonColor,
-                  borderRadius: BorderRadius.circular(widget.borderRadius),
-                ),
-                child: Center(
-                  child: SizedBox(
-                    height: PSizes.iconMd,
-                    width: PSizes.iconMd,
-                    child: Center(
-                      child: SvgPicture.asset(
-                        widget.imageIcon,
-                        color: PAppColors.white,
+    return GestureDetector(
+      child: SizedBox(
+        height: PSizes.buttonHeightLg,
+        width: PSizes.buttonWidthXSm,
+        child: Center(
+          child: Column(
+            children: [
+              GestureDetector(
+                onTap: widget.onTap,
+                child: Container(
+                  height: PSizes.imageThumbSize,
+                  width: PSizes.imageThumbSize,
+                  decoration: BoxDecoration(
+                    color: widget.buttonColor,
+                    borderRadius: BorderRadius.circular(widget.borderRadius),
+                  ),
+                  child: Center(
+                    child: SizedBox(
+                      height: PSizes.iconMd,
+                      width: PSizes.iconMd,
+                      child: Center(
+                        child: SvgPicture.asset(
+                          widget.imageIcon,
+                          color: PAppColors.white,
+                        ),
                       ),
                     ),
                   ),
                 ),
               ),
-            ),
-            SizedBox(height: PSizes.sm),
-            Center(child: Text(widget.text)),
-            Transform.scale(
-              scale: 1.2,
-              child: Radio(
-                value: widget.text,
-                activeColor: PAppColors.main,
-                groupValue: widget.selectedValue,
-                onChanged: widget.onChanged,
+              SizedBox(height: PSizes.sm),
+              Center(child: Text(widget.text)),
+              Transform.scale(
+                scale: PSizes.paragraphSpacing,
+                child: Radio(
+                  value: widget.text,
+                  activeColor: PAppColors.main,
+                  groupValue: widget.selectedValue,
+                  onChanged: widget.onChanged,
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

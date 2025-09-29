@@ -22,7 +22,6 @@ class _SubscriptionDurationScreenState
 
   @override
   Widget build(BuildContext context) {
-    print('here iam the build widget');
     return Scaffold(
       backgroundColor: PAppColors.black1000,
       appBar: CustomAppBar(showBack: true),
@@ -39,7 +38,7 @@ class _SubscriptionDurationScreenState
                     child: Image.asset(PImages.appLogo, width: 250),
                   ),
                 ),
-                SizedBox(height: 2 * PSizes.spaceBtwItems),
+                SizedBox(height: PSizes.spaceBtwSections),
                 ImageTextListTile(
                   leadingImage: PImages.calendar,
                   text: AppStrings.subsDu,
@@ -47,7 +46,7 @@ class _SubscriptionDurationScreenState
                 ),
                 SizedBox(height: PSizes.xl),
                 SizedBox(
-                  width: 2 * PSizes.buttonWidth,
+                  width: PSizes.imageThumbSizeULg,
                   child: Center(
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -128,10 +127,10 @@ class _SubscriptionDurationScreenState
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 2 * PSizes.xl),
+                  padding: const EdgeInsets.symmetric(vertical: PSizes.iconXLg),
                   child: AppButtons.simple(
                     text: AppStrings.cont,
-                    borderRadius: 2 * PSizes.buttonRadius,
+                    borderRadius: PSizes.borderRadiusLg,
                     onTap: () {
                       context.push('/otpVerificationScreen');
                     },

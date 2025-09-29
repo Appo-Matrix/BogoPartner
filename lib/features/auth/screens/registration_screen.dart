@@ -30,7 +30,7 @@ class RegistrationScreen extends StatelessWidget {
                     child: Image.asset(PImages.appLogo, width: 250),
                   ),
                 ),
-                SizedBox(height: 2 * PSizes.spaceBtwItems),
+                SizedBox(height: PSizes.spaceBtwSections),
                 CustomTextField(
                   prefixIcon: PImages.user,
                   hintText: AppStrings.companyName,
@@ -60,7 +60,7 @@ class RegistrationScreen extends StatelessWidget {
                 SizedBox(height: PSizes.spaceBtwItems),
                 AppButtons.simple(
                   text: AppStrings.cont,
-                  borderRadius: 2 * PSizes.buttonRadius,
+                  borderRadius: PSizes.fontSizeUMdLg,
                   onTap: () {
                     context.push('/subscriptionDurationScreen');
                   },

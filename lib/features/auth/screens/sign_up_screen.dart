@@ -21,21 +21,21 @@ class SignUpScreen extends StatelessWidget {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                SizedBox(height: 2 * PSizes.xl),
+                SizedBox(height:PSizes.iconXLg),
                 Center(
                   child: SizedBox(
                     height: PSizes.appBarHeight,
-                    width: 2 * PSizes.appBarHeight,
+                    width: PSizes.imageThumbSizeMd,
                     child: Center(child: Image.asset(PImages.logo)),
                   ),
                 ),
-                SizedBox(height: 4 * PSizes.defaultSpace),
+                SizedBox(height: PSizes.spaceBtwSectionsSm),
                 Text(
                   AppStrings.createAccount,
                   textAlign: TextAlign.center,
                   style: PAppStyles.heading1.copyWith(
                     color: PAppColors.white,
-                    fontSize: 2 * PSizes.fontSizeLgx - PSizes.xs,
+                    fontSize: PSizes.fontSizeUL,
                     fontFamily: AppFontFamilies.inter,
                   ),
                 ),
@@ -65,9 +65,9 @@ class SignUpScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(height: 3 * PSizes.xl),
+                SizedBox(height: PSizes.spaceBtwSectionsSm),
                 AppButtons.simple(text: AppStrings.logIn, onTap: () {}),
-                SizedBox(height: 2 * PSizes.xl),
+                SizedBox(height: PSizes.iconXLg),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [

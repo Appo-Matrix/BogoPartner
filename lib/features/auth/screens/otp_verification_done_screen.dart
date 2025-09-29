@@ -5,7 +5,6 @@ import 'package:partner_app/core/utils/constants/app_assets.dart';
 import 'package:partner_app/core/utils/constants/app_colors.dart';
 import 'package:partner_app/core/utils/constants/app_strings.dart';
 import 'package:partner_app/core/utils/constants/app_styles.dart';
-
 import '../../../core/utils/constants/app_sizes.dart';
 
 class OtpVerificationDoneScreen extends StatelessWidget {
@@ -22,12 +21,12 @@ class OtpVerificationDoneScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(height: 3 * PSizes.spaceBtwSections),
+                SizedBox(height: PSizes.spaceBtwSectionsSm),
                 Text(
                   AppStrings.register,
                   style: PAppStyles.heading1.copyWith(
                     color: PAppColors.white,
-                    fontSize: 2 * PSizes.fontSizeLgx,
+                    fontSize: PSizes.fontSizeUMdLg,
                     fontFamily: AppFontFamilies.inter,
                   ),
                 ),
@@ -36,7 +35,7 @@ class OtpVerificationDoneScreen extends StatelessWidget {
                   AppStrings.complete,
                   style: PAppStyles.heading1.copyWith(
                     color: PAppColors.white,
-                    fontSize: 3 * PSizes.fontSizeESm,
+                    fontSize: PSizes.iconLg,
                     fontFamily: AppFontFamilies.inter,
                   ),
                 ),
@@ -51,7 +50,7 @@ class OtpVerificationDoneScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(height: 2 * PSizes.spaceBtwSections),
+                SizedBox(height: PSizes.iconXLg),
                 Center(
                   child: SizedBox(
                     height: PSizes.buttonWidth,
@@ -59,11 +58,11 @@ class OtpVerificationDoneScreen extends StatelessWidget {
                     child: Center(child: Image.asset(PImages.verifiedIcon)),
                   ),
                 ),
-                SizedBox(height: 3 * PSizes.spaceBtwSections),
+                SizedBox(height: PSizes.spaceBtwSectionsSm),
                 Center(
                   child: AppButtons.simple(
                     text: AppStrings.cont,
-                    borderRadius: 2 * PSizes.buttonRadius,
+                    borderRadius: PSizes.borderRadiusXLg,
                     onTap: () {
                       context.push('/welcomeScreen');
                     },

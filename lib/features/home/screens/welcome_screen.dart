@@ -49,7 +49,7 @@ class WelcomeScreen extends StatelessWidget {
                 Align(
                   alignment: Alignment.centerRight,
                   child: Padding(
-                    padding: EdgeInsets.only(right: PSizes.spaceBtwSectionsLg),
+                    padding: EdgeInsets.only(right: PSizes.spaceBtwSectionsMd),
                     child: Container(
                       height: PSizes.size220,
                       width: PSizes.imageCarouselHeight,
@@ -88,7 +88,7 @@ class WelcomeScreen extends StatelessWidget {
                               style: PAppStyles.heading1.copyWith(
                                 color: PAppColors.white,
                                 fontSize: PSizes.fontSizeESm,
-                                height: 1.25,
+                                height: PSizes.paragraphSpacingLg,
                               ),
                             ),
                           ],

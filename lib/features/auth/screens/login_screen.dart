@@ -21,12 +21,11 @@ class LoginScreen extends StatelessWidget {
             child: SafeArea(
               child: Column(
                 children: [
-                  SizedBox(height: 4 * PSizes.xl),
+                  SizedBox(height: PSizes.spaceBtwSectionsMd),
                   Center(
                     child: SizedBox(
                       height: PSizes.imageThumbSize,
-                      width:
-                          PSizes.imageCarouselHeight - PSizes.spaceBtwSections,
+                      width: PSizes.imageThumbSizeLg,
                       child: Center(child: Image.asset(PImages.logo)),
                     ),
                   ),
@@ -35,16 +34,16 @@ class LoginScreen extends StatelessWidget {
                     AppStrings.letsYouIn,
                     style: PAppStyles.heading1.copyWith(
                       color: PAppColors.white,
-                      fontSize: 2 * PSizes.fontSizeLgx - PSizes.xs,
+                      fontSize: PSizes.fontSizeUL,
                       fontFamily: AppFontFamilies.inter,
                     ),
                   ),
                   SizedBox(height: PSizes.spaceBtwItems),
                   SizedBox(
-                    height: PSizes.imageCarouselHeight + PSizes.imageThumbSize,
+                    height: PSizes.spaceBtwSectionsXLg,
                     child: Center(child: Image.asset(PImages.partner)),
                   ),
-                  SizedBox(height: 3 * PSizes.spaceBtwSections),
+                  SizedBox(height: PSizes.spaceBtwSectionsSm),
                   AppButtons.simple(text: AppStrings.logIn, onTap: () {}),
                   AppButtons.simple(
                     text: AppStrings.signUp,

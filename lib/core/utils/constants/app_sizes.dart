@@ -24,6 +24,9 @@ class PSizes {
   static const double fontSizeMd = 16.0;
   static const double fontSizeLg = 18.0;
   static const double fontSizeLgx = 24.0;
+  static const double fontSizeLgx2 = 36.0;
+  static const double fontSizeUL = 44.0;
+  static const double fontSizeUMdLg = 48.0;
 
   // Button Sizes
   static const double buttonHeight = 70.0;
@@ -34,9 +37,15 @@ class PSizes {
   static const double buttonWidths = 80.0;
   static const double buttonElevation = 4.0;
 
+  // Spaces between TextLines
+  static const double paragraphSpacing = 1.2;
+  static const double paragraphSpacingLg = 1.25;
+
   // TextField Size
   static const double textFieldHeight = 75;
   static const double textFieldWidth = double.infinity;
+
+  // Carousel Size
   static const double cursorHeight = 25;
   static const double cursorWidth = 1;
 
@@ -45,13 +54,23 @@ class PSizes {
 
   // Image Size
   static const double imageThumbSize = 80.0;
+  static const double imageThumbSizeMd = 112.0;
+  static const double imageThumbSizeLg = 170.0;
   static const double imageThumbSizeXLg = 320.0;
+  static const double imageThumbSizeULg = 680.0;
 
   // Default Spacing between section
   static const double defaultSpace = 24.0;
   static const double spaceBtwItems = 16.0;
   static const double spaceBtwSections = 32.0;
+  static const double spaceBtwSectionsSm = 96.0;
+  static const double spaceBtwSectionsMd = 130.0;
   static const double spaceBtwSectionsLg = 180.0;
+  static const double spaceBtwSectionsXLg = 280.0;
+
+  /// static const double spaceBtwSectionsLg = 130.0;
+  /// static const double spaceBtwSectionsXLg = 180.0;
+  /// static const double spaceBtwSectionsEXLg = 280.0;
 
   // Border Radius
   static const double borderRadiusXSm = 12.0;
