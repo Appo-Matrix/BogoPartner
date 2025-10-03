@@ -1,5 +1,21 @@
 class PImages {
   // Images
+  static const String logoPartner = "assets/images/bogo_partner.png";
+  static const String bogoSimple = "assets/images/bogo_simple_logo.png";
+  static const String handSake = "assets/images/partnership_image.png";
+  static const String burger = "assets/images/burger.png";
+  static const String coffee = "assets/images/coffee.png";
+  static const String donut = "assets/images/donut.png";
+  static const String iceCream = "assets/images/ice-cream.png";
+  static const String noodles = "assets/images/noodles.png";
+  static const String pizza = "assets/images/pizza.png";
+  static const String atheltics = "assets/images/atheltics.png";
+  static const String handball = "assets/images/handball.png";
+  static const String mma = "assets/images/mma.png";
+  static const String wrestling = "assets/images/wersting.png";
+  static const String swimming = "assets/images/swmming.png";
+  static const String cycling = "assets/images/cycling.png";
+
   static const String appLogo = "assets/images/app_logo.png";
   static const String logo = "assets/images/logo.png";
   static const String laptopGuy = "assets/images/laptop_guy.png";
@@ -21,7 +37,6 @@ class PImages {
   static const String time = "assets/icons/time.png";
   static const String doc = "assets/icons/docs.png";
 
-  static const String logo = "assets/icons/logo.png";
 
   static const String ai = "assets/icons/logoAi.png";
   static const String pending = "assets/images/pending.png";
@@ -33,10 +48,7 @@ class PImages {
   static const String mc = "assets/icons/mic.png";
   static const String restaurants = "assets/images/restaurants.png";
   static const String fastFood = "assets/images/food.png";
-  static const String pizza = "assets/images/pizza.png";
   static const String icecream = "assets/images/icecream.png";
-  static const String coffee = "assets/images/coffe.png";
-  static const String donut = "assets/images/Patisserie.png";
   static const String times = "assets/images/time.png";
 
 

@@ -1,111 +1,111 @@
 import 'package:flutter/material.dart';
 import '../../core/utils/constants/app_colors.dart';
-import '../../core/utils/constants/app_sizes.dart'; // Assuming you have button sizes defined here
+import '../../core/utils/constants/app_sizes.dart';
 
 class BTextFieldTheme {
   BTextFieldTheme._();
 
+  /* -- Light Theme -- */
   static InputDecorationTheme lightInputDecorationTheme = InputDecorationTheme(
     errorMaxLines: 3,
-    // prefixIconColor: BAppColors.darkGray400,  // Use your custom dark gray for icons
-    // suffixIconColor: BAppColors.darkGray400,  // Use the same for suffix icon color
-    // constraints: const BoxConstraints.expand(height: TSizes.inputFieldHeight),
-    labelStyle: const TextStyle().copyWith(
+    prefixIconColor: PAppColors.gray500,
+    suffixIconColor: PAppColors.gray500,
+    labelStyle: const TextStyle(
       fontSize: PSizes.fontSizeMd,
-      color: PAppColors.lightGray900,
+      color: PAppColors.gray700,
     ),
-    // Text color for labels
-    hintStyle: const TextStyle().copyWith(
+    hintStyle: const TextStyle(
       fontSize: PSizes.fontSizeSm,
-      color: PAppColors.lightGray600,
+      color: PAppColors.gray500,
     ),
-    // Hint text color
-    errorStyle: const TextStyle().copyWith(fontStyle: FontStyle.normal),
-    floatingLabelStyle: const TextStyle().copyWith(
-      color: PAppColors.lightGray700.withOpacity(0.8),
+    floatingLabelStyle: const TextStyle(
+      fontWeight: FontWeight.w500,
+      color: PAppColors.primary500,
     ),
-    // Floating label color
-    border: const OutlineInputBorder().copyWith(
+    errorStyle: const TextStyle(
+      fontSize: PSizes.fontSizeSm,
+      fontStyle: FontStyle.normal,
+      color: PAppColors.error500,
+    ),
+    border: OutlineInputBorder(
       borderRadius: BorderRadius.circular(PSizes.inputFieldRadius),
-      borderSide: const BorderSide(
-        width: 1,
-        color: PAppColors.lightGray500,
-      ), // Border color for light mode
+      borderSide: const BorderSide(width: 1, color: PAppColors.gray400),
     ),
-    enabledBorder: const OutlineInputBorder().copyWith(
+    enabledBorder: OutlineInputBorder(
       borderRadius: BorderRadius.circular(PSizes.inputFieldRadius),
-      borderSide: const BorderSide(width: 1, color: PAppColors.lightGray500),
+      borderSide: const BorderSide(width: 1, color: PAppColors.gray400),
     ),
-    focusedBorder: const OutlineInputBorder().copyWith(
+    focusedBorder: OutlineInputBorder(
       borderRadius: BorderRadius.circular(PSizes.inputFieldRadius),
-      borderSide: const BorderSide(
-        width: 1,
-        color: PAppColors.primary,
-      ), // Focused border color
+      borderSide: const BorderSide(width: 1.5, color: PAppColors.primary500),
     ),
-    errorBorder: const OutlineInputBorder().copyWith(
+    disabledBorder: OutlineInputBorder(
       borderRadius: BorderRadius.circular(PSizes.inputFieldRadius),
-      borderSide: const BorderSide(
-        width: 1,
-        color: PAppColors.error500,
-      ), // Error border color
+      borderSide: const BorderSide(width: 1, color: PAppColors.gray300),
     ),
-    focusedErrorBorder: const OutlineInputBorder().copyWith(
+    errorBorder: OutlineInputBorder(
       borderRadius: BorderRadius.circular(PSizes.inputFieldRadius),
-      borderSide: const BorderSide(
-        width: 2,
-        color: PAppColors.error500,
-      ), // Focused error border color
+      borderSide: const BorderSide(width: 1, color: PAppColors.error500),
+    ),
+    focusedErrorBorder: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(PSizes.inputFieldRadius),
+      borderSide: const BorderSide(width: 2, color: PAppColors.error600),
+    ),
+    contentPadding: const EdgeInsets.symmetric(
+      horizontal: PSizes.md,
+      vertical: PSizes.sm,
     ),
   );
 
+  /* -- Dark Theme -- */
   static InputDecorationTheme darkInputDecorationTheme = InputDecorationTheme(
-    errorMaxLines: 2,
-    // prefixIconColor: BAppColors.darkGray400,  // Use custom dark gray for icons
-    // suffixIconColor: BAppColors.darkGray400,  // Same for suffix icon color
-    // constraints: const BoxConstraints.expand(height: TSizes.inputFieldHeight),
-    labelStyle: const TextStyle().copyWith(
+    errorMaxLines: 3,
+    prefixIconColor: PAppColors.gray400,
+    suffixIconColor: PAppColors.gray400,
+    labelStyle: const TextStyle(
       fontSize: PSizes.fontSizeMd,
-      color: PAppColors.lightGray100,
+      color: PAppColors.gray200,
     ),
-    // Text color for labels in dark mode
-    hintStyle: const TextStyle().copyWith(
+    hintStyle: const TextStyle(
       fontSize: PSizes.fontSizeSm,
-      color: PAppColors.lightGray500,
+      color: PAppColors.gray400,
     ),
-    // Hint text color
-    floatingLabelStyle: const TextStyle().copyWith(
-      color: PAppColors.lightGray200.withOpacity(0.8),
+    floatingLabelStyle: const TextStyle(
+      fontWeight: FontWeight.w500,
+      color: PAppColors.primary400,
     ),
-    // Floating label color
-    border: const OutlineInputBorder().copyWith(
+    errorStyle: const TextStyle(
+      fontSize: PSizes.fontSizeSm,
+      fontStyle: FontStyle.normal,
+      color: PAppColors.error400,
+    ),
+    border: OutlineInputBorder(
       borderRadius: BorderRadius.circular(PSizes.inputFieldRadius),
-      // borderSide: const BorderSide(width: 1, color: BAppColors.darkGray500),  // Border color for dark mode
+      borderSide: const BorderSide(width: 1, color: PAppColors.gray600),
     ),
-    enabledBorder: const OutlineInputBorder().copyWith(
+    enabledBorder: OutlineInputBorder(
       borderRadius: BorderRadius.circular(PSizes.inputFieldRadius),
-      // borderSide: const BorderSide(width: 1, color: BAppColors.darkGray500),
+      borderSide: const BorderSide(width: 1, color: PAppColors.gray600),
     ),
-    focusedBorder: const OutlineInputBorder().copyWith(
+    focusedBorder: OutlineInputBorder(
       borderRadius: BorderRadius.circular(PSizes.inputFieldRadius),
-      borderSide: const BorderSide(
-        width: 1,
-        color: PAppColors.primary,
-      ), // Focused border color in dark mode
+      borderSide: const BorderSide(width: 1.5, color: PAppColors.primary400),
     ),
-    errorBorder: const OutlineInputBorder().copyWith(
+    disabledBorder: OutlineInputBorder(
       borderRadius: BorderRadius.circular(PSizes.inputFieldRadius),
-      borderSide: const BorderSide(
-        width: 1,
-        color: PAppColors.error500,
-      ), // Error border color
+      borderSide: const BorderSide(width: 1, color: PAppColors.gray700),
     ),
-    focusedErrorBorder: const OutlineInputBorder().copyWith(
+    errorBorder: OutlineInputBorder(
       borderRadius: BorderRadius.circular(PSizes.inputFieldRadius),
-      borderSide: const BorderSide(
-        width: 2,
-        color: PAppColors.error500,
-      ), // Focused error border color
+      borderSide: const BorderSide(width: 1, color: PAppColors.error400),
+    ),
+    focusedErrorBorder: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(PSizes.inputFieldRadius),
+      borderSide: const BorderSide(width: 2, color: PAppColors.error500),
+    ),
+    contentPadding: const EdgeInsets.symmetric(
+      horizontal: PSizes.md,
+      vertical: PSizes.sm,
     ),
   );
 }

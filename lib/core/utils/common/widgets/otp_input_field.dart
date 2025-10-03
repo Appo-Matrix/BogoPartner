@@ -23,7 +23,7 @@ class OtpInputField extends StatelessWidget {
           weight: FontWeight.w700,
         ),
         decoration: BoxDecoration(
-          color: PAppColors.lightGray1000,
+          color: PAppColors.darkGray750,
           borderRadius: BorderRadius.circular(PSizes.buttonRadius),
         ),
       ),

@@ -24,9 +24,8 @@ class _SubscriptionDurationScreenState
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: PAppColors.black1000,
-      appBar: CustomAppBar(showBack: true),
       body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: PSizes.md),
+        padding: EdgeInsets.symmetric(horizontal: PSizes.sm),
         child: SafeArea(
           child: SingleChildScrollView(
             child: Column(
@@ -40,11 +39,11 @@ class _SubscriptionDurationScreenState
                 ),
                 SizedBox(height: PSizes.spaceBtwSections),
                 ImageTextListTile(
-                  leadingImage: PImages.calendar,
+                  leadingImage: PImages.appLogo,
                   text: AppStrings.subsDu,
                   trailingImage: PImages.down,
                 ),
-                SizedBox(height: PSizes.xl),
+                SizedBox(height: PSizes.spaceBtwSections),
                 SizedBox(
                   width: PSizes.imageThumbSizeULg,
                   child: Center(

@@ -8,8 +8,6 @@ class SplashScreen extends StatefulWidget {
   final String nextLocation;
 
   const SplashScreen({super.key, this.nextLocation = '/loginScreen'});
-=======
-  const SplashScreen({super.key, this.nextLocation = '/businessDetailsFormScreen'});
 
   @override
   State<SplashScreen> createState() => _SplashScreenState();
@@ -28,15 +26,20 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: PAppColors.deeper,
+      backgroundColor: PAppColors.darkBackground,
 
       // Body
       body: SafeArea(
         child: Stack(
           children: [
             Center(
-              child: Image.asset("assets/images/app_logo.png", width: 250),
+              child: Image.asset(
+                PImages.logoPartner,
+                width: 250,
+              ),
             ),
+
+            /// Loader at bottom
             Align(
               alignment: Alignment.bottomCenter,
               child: Padding(
@@ -45,7 +48,7 @@ class _SplashScreenState extends State<SplashScreen> {
                   valueColor: const AlwaysStoppedAnimation<Color>(
                     PAppColors.white,
                   ),
-                  strokeWidth: 5,
+                  strokeWidth: 3,
                 ),
               ),
             ),

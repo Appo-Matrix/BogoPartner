@@ -23,7 +23,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                 child: SizedBox(
                   height: PSizes.iconLg,
                   width: PSizes.iconLg,
-                  child: Center(child: SvgPicture.asset(PImages.back)),
+                  child: Center(child: SvgPicture.asset(PImages.back, color: Colors.white,)),
                 ),
               ),
           ],

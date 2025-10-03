@@ -56,7 +56,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
             cursorWidth: PSizes.cursorWidth,
             decoration: InputDecoration(
               filled: true,
-              fillColor: PAppColors.black800,
+              fillColor: PAppColors.darkGray750,
               prefixIcon: widget.prefixIcon == null
                   ? Padding(
                       padding: EdgeInsets.symmetric(horizontal: PSizes.xs),

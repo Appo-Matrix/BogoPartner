@@ -9,40 +9,46 @@ class BOutlinedButtonTheme {
   static final lightOutlinedButtonTheme = OutlinedButtonThemeData(
     style: OutlinedButton.styleFrom(
       elevation: 0,
-      foregroundColor: PAppColors.dark,
-      side: const BorderSide(color: PAppColors.black400),
+      foregroundColor: PAppColors.primary500,
+      side: const BorderSide(color: PAppColors.primary500, width: 1.5),
+      disabledForegroundColor: PAppColors.gray400,
+      disabledBackgroundColor: Colors.transparent,
       textStyle: const TextStyle(
         fontSize: 16,
-        color: PAppColors.black400,
         fontWeight: FontWeight.w600,
       ),
       padding: const EdgeInsets.symmetric(
         vertical: PSizes.buttonHeight,
-        horizontal: 20,
+        horizontal: PSizes.md,
       ),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(PSizes.buttonRadius),
       ),
+    ).copyWith(
+      overlayColor: MaterialStateProperty.all(PAppColors.primary50),
     ),
   );
 
   /* -- Dark Theme -- */
   static final darkOutlinedButtonTheme = OutlinedButtonThemeData(
     style: OutlinedButton.styleFrom(
-      foregroundColor: PAppColors.light,
-      side: const BorderSide(color: PAppColors.lightGray200),
+      foregroundColor: PAppColors.primary400,
+      side: const BorderSide(color: PAppColors.primary400, width: 1.5),
+      disabledForegroundColor: PAppColors.gray600,
+      disabledBackgroundColor: Colors.transparent,
       textStyle: const TextStyle(
         fontSize: 16,
-        color: PAppColors.lightGray100,
         fontWeight: FontWeight.w600,
       ),
       padding: const EdgeInsets.symmetric(
         vertical: PSizes.buttonHeight,
-        horizontal: 20,
+        horizontal: PSizes.md,
       ),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(PSizes.buttonRadius),
       ),
+    ).copyWith(
+      overlayColor: MaterialStateProperty.all(PAppColors.gray800),
     ),
   );
 }

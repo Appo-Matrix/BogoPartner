@@ -33,7 +33,7 @@ class AppButtons extends StatefulWidget {
 
   AppButtons.square({
     required this.imageIcon,
-    this.buttonColor = PAppColors.black800,
+    this.buttonColor = PAppColors.darkGray750,
     this.iconColor = PAppColors.white,
     required this.text,
     required this.onTap,
@@ -51,7 +51,7 @@ class AppButtons extends StatefulWidget {
     required this.selectedValue,
     super.key,
   }) : type = Button.radioSquare,
-       buttonColor = PAppColors.black800,
+       buttonColor = PAppColors.darkGray750,
        isOutlined = false,
        iconColor = null,
        onTap = null,
@@ -98,7 +98,7 @@ class _AppButtonsState extends State<AppButtons> {
           height: PSizes.buttonHeight,
           width: PSizes.buttonWidth,
           decoration: BoxDecoration(
-            color: widget.isOutlined ? PAppColors.black800 : widget.buttonColor,
+            color: widget.isOutlined ? PAppColors.darkGray750 : widget.buttonColor,
             borderRadius: BorderRadius.circular(widget.borderRadius),
           ),
           child: Center(
