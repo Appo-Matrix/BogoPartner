@@ -29,7 +29,7 @@ class SignUpScreen extends StatelessWidget {
                     child: Center(child: Image.asset(PImages.logo)),
                   ),
                 ),
-                SizedBox(height: PSizes.spaceBtwSectionsSm),
+                SizedBox(height: PSizes.spaceBtwSections),
                 Text(
                   AppStrings.createAccount,
                   textAlign: TextAlign.center,

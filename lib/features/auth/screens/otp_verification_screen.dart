@@ -16,7 +16,7 @@ class OtpVerificationScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: PAppColors.black1000,
-      appBar: CustomAppBar(showBack: true),
+      appBar: AppBar(leading:Icon(Icons.arrow_back),),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: PSizes.md),
         child: SafeArea(
@@ -52,9 +52,9 @@ class OtpVerificationScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(height: PSizes.xl),
+                SizedBox(height: PSizes.spaceBtwSections),
                 OtpInputField(controller: TextEditingController()),
-                SizedBox(height: PSizes.buttonWidth),
+                SizedBox(height: PSizes.spaceBtwSectionsXLg),
                 AppButtons.simple(
                   text: AppStrings.cont,
                   borderRadius: PSizes.fontSizeUMdLg,

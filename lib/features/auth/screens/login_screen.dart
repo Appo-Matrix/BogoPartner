@@ -21,7 +21,7 @@ class LoginScreen extends StatelessWidget {
             child: SafeArea(
               child: Column(
                 children: [
-                  SizedBox(height: PSizes.spaceBtwSectionsMd),
+                  SizedBox(height: PSizes.spaceBtwItems),
                   Center(
                     child: SizedBox(
                       height: PSizes.imageThumbSize,
