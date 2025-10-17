@@ -96,12 +96,8 @@ class PImages {
   static const String logout = "assets/icons/logout.png";
   static const String shops = "assets/images/shops.png";
   static const String scanMe = "assets/images/scan.png";
-  static const String partner = "assets/images/partner.png";
-  static const String name = "assets/icons/name.png";
   static const String names = "assets/icons/names.png";
-  static const String email = "assets/icons/email.png";
   static const String phone = "assets/icons/Phone.png";
-  static const String lock = "assets/icons/Lock.png";
   static const String edits = "assets/icons/edits.png";
   static const String photos = "assets/images/photos.png";
   static const String ball = "assets/images/ball.png";

@@ -25,7 +25,7 @@ class PSubscriptionCard extends StatelessWidget {
       height: 93,
       width: 222,
       decoration: BoxDecoration(
-        color: PAppColors.warning300,
+        color: PAppColors.warning50,
         borderRadius: const BorderRadius.only(
           topRight: Radius.circular(21),
           bottomRight: Radius.circular(21),

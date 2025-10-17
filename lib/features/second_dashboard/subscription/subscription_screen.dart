@@ -64,7 +64,7 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> {
                           height: 93,
                           width: 222,
                           decoration: BoxDecoration(
-                            color: PAppColors.warning300,
+                            color: PAppColors.warning50,
                             borderRadius: BorderRadius.only(
                               topRight: Radius.circular(21),
                               bottomRight: Radius.circular(21),
@@ -147,7 +147,7 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> {
                           TextSpan(text: 'You are currently '),
                           TextSpan(
                             text: 'subscribed',
-                            style: TextStyle(color: PAppColors.darker),
+                            style: TextStyle(color: PAppColors.main),
                           ),
                         ],
                       ),

@@ -185,7 +185,7 @@ class _ReservationWidgetState extends State<ReservationWidget> {
                       title: "Rooms",
                       numberText: "01",
                       assetPath: PImages.rooms,
-                      assetBackgroundColor: PAppColors.warning300,
+                      assetBackgroundColor: PAppColors.warning50,
                     ),
                   ],
                 ),
