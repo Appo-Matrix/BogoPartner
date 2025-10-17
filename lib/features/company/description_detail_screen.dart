@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:partner_app/features/company/widgets/custom_radio_button.dart';
 import 'package:partner_app/features/company/widgets/display_box.dart';
 import 'package:partner_app/features/company/widgets/file_upload_card.dart';
 import 'package:partner_app/features/company/widgets/map_card.dart';
 import 'package:partner_app/features/company/widgets/offer_selector.dart';
 import 'package:partner_app/features/company/widgets/working_hours_card.dart';
+import '../../core/utils/common/widgets/app_buttons.dart';
 import '../../core/utils/constants/app_colors.dart';
 import '../../core/utils/constants/app_sizes.dart';
 import '../../core/utils/constants/app_styles.dart';
@@ -175,9 +177,12 @@ class _DescriptionDetailScreenState extends State<DescriptionDetailScreen> {
             ),
 
             const SizedBox(height: PSizes.spaceBtwSections),
-            SizedBox(
-              width: double.infinity,
-              child: ContinueButton(onPressed: () => print("Continue pressed")),
+            AppButtons.simple(
+              text: 'Continue',
+              borderRadius: PSizes.fontSizeUMdLg,
+              onTap: () {
+                context.push('/addOptionScreen');
+              },
             ),
           ],
         ),
@@ -186,36 +191,6 @@ class _DescriptionDetailScreenState extends State<DescriptionDetailScreen> {
   }
 }
 
-class ContinueButton extends StatelessWidget {
-  final VoidCallback onPressed;
-
-  const ContinueButton({super.key, required this.onPressed});
-
-  @override
-  Widget build(BuildContext context) {
-    return ElevatedButton(
-      onPressed: onPressed,
-      style: ElevatedButton.styleFrom(
-        backgroundColor: PAppColors.primary,
-        padding: const EdgeInsets.symmetric(
-          horizontal: PSizes.lg,
-          vertical: PSizes.md,
-        ),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(PSizes.buttonRadius * 2),
-        ),
-      ),
-      child: Text(
-        "Continue",
-        style: PAppStyles.poppins(
-          color: PAppColors.white,
-          fontSize: PSizes.fontSizeMd,
-          weight: FontWeight.w600,
-        ),
-      ),
-    );
-  }
-}
 
 Widget sectionHeader(String title, {IconData? icon, Color? color}) {
   return Row(

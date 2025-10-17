@@ -138,9 +138,8 @@ class _AppButtonsState extends State<AppButtons> {
     return Column(
       children: [
         GestureDetector(
-          onTap: () {
-            widget.onTap;
-          },
+          onTap: widget.onTap,
+
           child: Container(
             height: PSizes.imageThumbSize,
             width: PSizes.imageThumbSize,
@@ -192,7 +191,7 @@ class _AppButtonsState extends State<AppButtons> {
                       height: PSizes.iconMd,
                       width: PSizes.iconMd,
                       child: Center(
-                        child: SvgPicture.asset(
+                        child: Image.asset(
                           widget.imageIcon,
                           color: PAppColors.white,
                         ),

@@ -38,7 +38,6 @@ class _AddCompanyScreenState extends State<AddCompanyScreen> {
         elevation: 0,
         leading: InkWell(
           onTap: () {
-            context.push("/businessDetailsFormScreen");
           },
           child: Icon(
             Icons.arrow_back_outlined,
@@ -161,7 +160,7 @@ class _AddCompanyScreenState extends State<AddCompanyScreen> {
                 width: double.infinity,
                 height: 92,
                 onTap: () {
-                  context.go("/descriptionScreenTwo");
+                  context.push("/descriptionScreen");
                 },
               ),
 

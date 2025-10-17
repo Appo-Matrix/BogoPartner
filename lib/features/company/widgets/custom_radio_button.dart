@@ -42,7 +42,7 @@ class _CustomRadioButtonGroupState extends State<CustomRadioButtonGroup> {
               widget.onChanged(option);
             },
             child: Container(
-              height: widget.height,
+              height: PSizes.buttonHeight,
               margin: const EdgeInsets.symmetric(horizontal: PSizes.xs),
               padding: const EdgeInsets.symmetric(horizontal: PSizes.md),
               decoration: BoxDecoration(

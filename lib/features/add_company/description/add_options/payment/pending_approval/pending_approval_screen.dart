@@ -17,12 +17,10 @@ class _PendingApprovalScreenState extends State<PendingApprovalScreen> {
     return Scaffold(
       backgroundColor: PAppColors.black1000,
 
-      // App Bar
       appBar: AppBar(
         backgroundColor: PAppColors.black1000,
-
         leading: InkWell(
-          onTap: () {},
+          onTap: () => Navigator.pop(context),
           child: Icon(
             Icons.arrow_back_outlined,
             size: 24,
@@ -31,16 +29,15 @@ class _PendingApprovalScreenState extends State<PendingApprovalScreen> {
         ),
       ),
 
-      // Body
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Align(
-                alignment: Alignment.center,
-                child: Text(
+      body: SafeArea(
+        child: SingleChildScrollView(
+          physics: const BouncingScrollPhysics(),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Text(
                   "Complete non configuré",
                   style: PAppStyles.poppins(
                     color: PAppColors.white,
@@ -48,53 +45,55 @@ class _PendingApprovalScreenState extends State<PendingApprovalScreen> {
                     weight: FontWeight.w600,
                   ),
                 ),
-              ),
 
-              const SizedBox(height: PSizes.md),
+                const SizedBox(height: PSizes.md),
 
-              Image.asset(PImages.pending),
-
-              const SizedBox(height: PSizes.md),
-
-              Container(
-                height: 131,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  color: PAppColors.error500,
-                  borderRadius: BorderRadius.circular(22),
+                // Image that might overflow on small screens
+                Image.asset(
+                  PImages.pending,
+                  fit: BoxFit.contain,
+                  height: MediaQuery.of(context).size.height * 0.3,
                 ),
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 14),
+
+                const SizedBox(height: PSizes.lg),
+
+                // === Pending message box ===
+                Container(
+                  width: double.infinity,
+                  padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
+                  decoration: BoxDecoration(
+                    color: PAppColors.error500,
+                    borderRadius: BorderRadius.circular(22),
+                  ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const SizedBox(height: PSizes.sm),
                       Row(
                         children: [
-                          Image.asset(PImages.loading),
-                          Text(
-                            "Your request is currently under review",
-                            style: PAppStyles.poppins(
-                              color: PAppColors.white,
-                              fontSize: PSizes.iconSms,
-                              weight: FontWeight.w700,
+                          Image.asset(PImages.loading, height: 30),
+                          const SizedBox(width: 8),
+                          Expanded(
+                            child: Text(
+                              "Your request is currently under review",
+                              style: PAppStyles.poppins(
+                                color: PAppColors.white,
+                                fontSize: PSizes.iconSms,
+                                weight: FontWeight.w700,
+                              ),
                             ),
                           ),
                         ],
                       ),
                       const SizedBox(height: PSizes.md),
-
                       Text(
-                        "We will respond within 24 hours maximum. We appreciate your patience",
+                        "We will respond within 24 hours maximum. We appreciate your patience.",
                         style: PAppStyles.poppins(
                           color: PAppColors.white,
                           fontSize: PSizes.iconSm,
                           weight: FontWeight.w500,
                         ),
                       ),
-
-                      const SizedBox(height: PSizes.md),
-
+                      const SizedBox(height: PSizes.sm),
                       Text(
                         "Our team will contact you soon.",
                         style: PAppStyles.poppins(
@@ -106,36 +105,29 @@ class _PendingApprovalScreenState extends State<PendingApprovalScreen> {
                     ],
                   ),
                 ),
-              ),
 
-              const SizedBox(height: PSizes.md),
+                const SizedBox(height: PSizes.lg),
 
-              Container(
-                height: 117,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  color: PAppColors.black900,
-                  borderRadius: BorderRadius.circular(22),
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 14),
+                // === Contact box ===
+                Container(
+                  width: double.infinity,
+                  padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 20),
+                  decoration: BoxDecoration(
+                    color: PAppColors.black900,
+                    borderRadius: BorderRadius.circular(22),
+                  ),
                   child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      const SizedBox(height: PSizes.sm),
-
                       Text(
-                        "contact for assistance",
+                        "Contact for assistance",
                         style: PAppStyles.poppins(
                           color: PAppColors.error400,
                           fontSize: PSizes.iconSms,
                           weight: FontWeight.w700,
                         ),
                       ),
-
                       const SizedBox(height: PSizes.md),
-
                       Text(
                         "restaurants@bogo.com",
                         style: PAppStyles.poppins(
@@ -144,9 +136,7 @@ class _PendingApprovalScreenState extends State<PendingApprovalScreen> {
                           weight: FontWeight.w500,
                         ),
                       ),
-
-                      const SizedBox(height: PSizes.md),
-
+                      const SizedBox(height: PSizes.sm),
                       Text(
                         "05501244444",
                         style: PAppStyles.poppins(
@@ -158,8 +148,9 @@ class _PendingApprovalScreenState extends State<PendingApprovalScreen> {
                     ],
                   ),
                 ),
-              ),
-            ],
+                const SizedBox(height: 20),
+              ],
+            ),
           ),
         ),
       ),

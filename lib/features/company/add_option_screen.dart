@@ -38,15 +38,18 @@ class _AddOptionScreenState extends State<AddOptionScreen> {
   void toggleOption(String title) {
     setState(() {
       if (selectedOptions.contains(title)) {
-        selectedOptions.remove(title); // cancel selection
+        selectedOptions.remove(title);
       } else {
-        selectedOptions.add(title); // add selection
+        selectedOptions.add(title);
       }
     });
   }
 
   @override
   Widget build(BuildContext context) {
+    final double itemWidth =
+        (MediaQuery.of(context).size.width - (PSizes.md * 2 + PSizes.spaceBtwItems)) / 2;
+
     return Scaffold(
       backgroundColor: PAppColors.darkBackground,
       appBar: AppBar(
@@ -68,22 +71,23 @@ class _AddOptionScreenState extends State<AddOptionScreen> {
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(PSizes.md),
-        child: Wrap(
-          spacing: PSizes.spaceBtwItems,
-          runSpacing: PSizes.spaceBtwItems,
-          children: options
-              .map(
-                (title) => CustomOptionTile(
-              title: title,
-              isSelected: selectedOptions.contains(title),
-              onTap: () => toggleOption(title),
-              width: (MediaQuery.of(context).size.width -
-                  (PSizes.md * 2 + PSizes.spaceBtwItems)) /
-                  2, // 2 per row with spacing
-              height: PSizes.buttonHeight * 3.5, // ~62
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Wrap(
+              spacing: PSizes.spaceBtwItems,
+              runSpacing: PSizes.spaceBtwItems,
+              children: options.map((title) {
+                return CustomOptionTile(
+                  title: title,
+                  isSelected: selectedOptions.contains(title),
+                  onTap: () => toggleOption(title),
+                  width: itemWidth,
+                  height: PSizes.buttonHeight * 3.5,
+                );
+              }).toList(),
             ),
-          )
-              .toList(),
+          ],
         ),
       ),
     );
@@ -94,7 +98,6 @@ class CustomOptionTile extends StatelessWidget {
   final String title;
   final bool isSelected;
   final VoidCallback onTap;
-
   final double width;
   final double height;
   final double borderRadius;
@@ -105,8 +108,8 @@ class CustomOptionTile extends StatelessWidget {
     required this.isSelected,
     required this.onTap,
     this.width = PSizes.buttonWidth,
-    this.height = PSizes.buttonHeight * 3.5, // 62px approx
-    this.borderRadius = PSizes.borderRadiusLg * 2, // 24px
+    this.height = PSizes.buttonHeight * 3.5,
+    this.borderRadius = PSizes.borderRadiusLg * 2,
   });
 
   @override
@@ -136,17 +139,17 @@ class CustomOptionTile extends StatelessWidget {
           GestureDetector(
             onTap: onTap,
             child: Container(
-              width: PSizes.iconLg, // 32
+              width: PSizes.iconLg,
               height: PSizes.iconLg,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 color: isSelected
-                    ? PAppColors.error500 // ❌ cancel = red
-                    : PAppColors.primary500, // ➕ add = green
+                    ? PAppColors.error500
+                    : PAppColors.primary500,
               ),
               child: Icon(
                 isSelected ? Icons.close : Icons.add,
-                size: PSizes.iconSm, // 16
+                size: PSizes.iconSm,
                 color: PAppColors.white,
               ),
             ),

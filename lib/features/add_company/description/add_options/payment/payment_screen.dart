@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:partner_app/core/utils/constants/app_assets.dart';
 import 'package:partner_app/core/utils/constants/app_colors.dart';
 import 'package:partner_app/core/utils/constants/app_sizes.dart';
@@ -264,7 +265,9 @@ class _PaymentScreenState extends State<PaymentScreen> {
                         Spacer(),
 
                         InkWell(
-                          onTap: () {},
+                          onTap: () {
+                            context.push("/pendingApprovalScreen");
+                          },
                           borderRadius: BorderRadius.circular(999),
                           child: Container(
                             height: 79,

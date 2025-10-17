@@ -36,10 +36,10 @@ class _WorkingHoursCardState extends State<WorkingHoursCard> {
           Row(
             children: [
               CircleAvatar(
-                radius: 16,
-                backgroundColor: PAppColors.warning50,
+                radius: 20,
+                backgroundColor: PAppColors.error400,
                 child: const Icon(Icons.access_time,
-                    color: PAppColors.white, size: 18),
+                    color: PAppColors.black1000, size: 18),
               ),
               const SizedBox(width: PSizes.sm),
               Text(
