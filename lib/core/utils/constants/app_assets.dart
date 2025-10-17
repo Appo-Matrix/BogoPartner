@@ -56,10 +56,9 @@ class PImages {
 
   static const String email = "assets/icons/email.svg";
   static const String name = "assets/icons/name.svg";
-  static const String sport = "assets/icons/sport.svg";
-  static const String hairDryer = "assets/icons/hair_dryer.svg";
-  static const String coupon = "assets/icons/coupon.svg";
-  static const String entertainment = "assets/icons/entertainment.svg";
+  static const String hairDryer = "assets/images/beauty.png";
+  static const String coupon = "assets/images/cupon.png";
+  static const String entertainment = "assets/images/entertemnet.png";
   static const String back = "assets/icons/back.svg";
   static const String down = "assets/icons/down.svg";
   static const String calendar = "assets/icons/calendar.svg";
@@ -67,6 +66,8 @@ class PImages {
   static const String user = "assets/icons/user.svg";
   static const String lock = "assets/icons/lock.svg";
   static const String lock2 = "assets/icons/lock2.svg";
+  static const String sports2 = "assets/images/sports.png";
+  static const String hotel2 = "assets/images/hotel-2 (1).png";
   static const String obscureIcon = "assets/icons/obscure_icon.svg";
 
 

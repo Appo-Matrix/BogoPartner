@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import '../../../../core/utils/constants/app_colors.dart';
-import '../../../../core/utils/constants/app_sizes.dart';
-import '../../../../core/utils/constants/app_styles.dart';
+import 'package:partner_app/core/utils/constants/app_colors.dart';
+import 'package:partner_app/core/utils/constants/app_sizes.dart';
+import 'package:partner_app/core/utils/constants/app_styles.dart';
 
-class AddOptionsScreen extends StatefulWidget {
-  const AddOptionsScreen({super.key});
+class AddOptionScreen extends StatefulWidget {
+  const AddOptionScreen({super.key});
 
   @override
-  State<AddOptionsScreen> createState() => _AddOptionsScreenState();
+  State<AddOptionScreen> createState() => _AddOptionScreenState();
 }
 
-class _AddOptionsScreenState extends State<AddOptionsScreen> {
+class _AddOptionScreenState extends State<AddOptionScreen> {
   final List<String> _options = const [
     'Restaurant',
     'Parking',
@@ -33,7 +33,6 @@ class _AddOptionsScreenState extends State<AddOptionsScreen> {
     'Bar',
   ];
 
-  // No default selected now
   final Set<String> _selected = {};
 
   @override
@@ -43,26 +42,24 @@ class _AddOptionsScreenState extends State<AddOptionsScreen> {
       body: SafeArea(
         child: Stack(
           children: [
-            Padding(
+            // Main scrollable content
+            SingleChildScrollView(
+              physics: const BouncingScrollPhysics(),
               padding: const EdgeInsets.symmetric(horizontal: PSizes.md),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const SizedBox(height: PSizes.lg),
 
-                  // Back
+                  // Back button
                   Row(
                     children: [
                       InkWell(
-                        onTap: () => Navigator.maybePop(context),
-                        child: InkWell(
-                          onTap: () {
-                            context.push("/descriptionScreenTwo");
-                          },
-                          child: Icon(
-                            Icons.arrow_back,
-                            color: PAppColors.white,
-                            size: PSizes.iconLg,
-                          ),
+                        onTap: () => context.push("/descriptionScreenTwo"),
+                        child: Icon(
+                          Icons.arrow_back,
+                          color: PAppColors.white,
+                          size: PSizes.iconLg,
                         ),
                       ),
                     ],
@@ -82,10 +79,9 @@ class _AddOptionsScreenState extends State<AddOptionsScreen> {
 
                   const SizedBox(height: PSizes.spaceBtwSections),
 
-                  // Options grid (no local size vars)
+                  // Options grid inside scroll
                   LayoutBuilder(
                     builder: (context, constraints) {
-                      // two columns: width = (available - spacing) / 2
                       final double itemWidth =
                           (constraints.maxWidth - PSizes.md) / 2;
 
@@ -99,7 +95,7 @@ class _AddOptionsScreenState extends State<AddOptionsScreen> {
                             height: 62,
                             decoration: BoxDecoration(
                               color: isSelected
-                                  ? (PAppColors.orange)
+                                  ? PAppColors.orange
                                   : PAppColors.black900,
                               borderRadius: BorderRadius.circular(24),
                             ),
@@ -108,7 +104,6 @@ class _AddOptionsScreenState extends State<AddOptionsScreen> {
                             ),
                             child: Row(
                               children: [
-                                // label
                                 Expanded(
                                   child: Text(
                                     label,
@@ -121,8 +116,6 @@ class _AddOptionsScreenState extends State<AddOptionsScreen> {
                                     ),
                                   ),
                                 ),
-
-                                // trailing action (plus or cross)
                                 InkWell(
                                   onTap: () {
                                     setState(() {
@@ -159,6 +152,8 @@ class _AddOptionsScreenState extends State<AddOptionsScreen> {
                       );
                     },
                   ),
+
+                  const SizedBox(height: PSizes.spaceBtwSections * 2),
                 ],
               ),
             ),
@@ -178,7 +173,7 @@ class _AddOptionsScreenState extends State<AddOptionsScreen> {
                 child: Center(
                   child: InkWell(
                     onTap: () {
-                      context.go("/paymentScreen");
+                      context.push("/paymentScreen");
                     },
                     child: Icon(
                       Icons.check,

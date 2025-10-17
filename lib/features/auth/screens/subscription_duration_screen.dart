@@ -24,6 +24,8 @@ class _SubscriptionDurationScreenState
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: PAppColors.black1000,
+      appBar: AppBar(leading:Icon(Icons.arrow_back),),
+
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: PSizes.sm),
         child: SafeArea(
@@ -61,7 +63,7 @@ class _SubscriptionDurationScreenState
                           selectedValue: selectedValue,
                         ),
                         AppButtons.radioSquare(
-                          imageIcon: PImages.hotel,
+                          imageIcon: PImages.hotel2,
                           onChanged: (value) {
                             setState(() {
                               selectedValue = value;
@@ -71,7 +73,7 @@ class _SubscriptionDurationScreenState
                           selectedValue: selectedValue,
                         ),
                         AppButtons.radioSquare(
-                          imageIcon: PImages.sport,
+                          imageIcon: PImages.sports2,
                           onChanged: (value) {
                             setState(() {
                               selectedValue = value;
@@ -92,7 +94,7 @@ class _SubscriptionDurationScreenState
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         AppButtons.radioSquare(
-                          imageIcon: PImages.entertainment,
+                          imageIcon: PImages.pizza,
                           onChanged: (value) {
                             setState(() {
                               selectedValue = value;
@@ -102,7 +104,7 @@ class _SubscriptionDurationScreenState
                           selectedValue: selectedValue,
                         ),
                         AppButtons.radioSquare(
-                          imageIcon: PImages.hairDryer,
+                          imageIcon: PImages.hotel2,
                           onChanged: (value) {
                             setState(() {
                               selectedValue = value;

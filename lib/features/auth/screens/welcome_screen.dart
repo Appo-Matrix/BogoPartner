@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:partner_app/core/utils/common/widgets/app_buttons.dart';
 import 'package:partner_app/core/utils/constants/app_assets.dart';
 import 'package:partner_app/core/utils/constants/app_strings.dart';
@@ -14,7 +15,8 @@ class WelcomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: PAppColors.black1000,
-      appBar: CustomAppBar(showBack: true),
+      appBar: AppBar(leading:Icon(Icons.arrow_back),),
+
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: PSizes.md),
         child: SingleChildScrollView(
@@ -35,11 +37,15 @@ class WelcomeScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         AppButtons.square(
+
                           imageIcon: Icons.add,
-                          buttonColor: PAppColors.white,
+                          buttonColor: PAppColors.black1000,
                           iconColor: PAppColors.backGroundColor,
                           text: AppStrings.addCompany,
-                          onTap: () {},
+                          onTap: () {
+                            print("Hey am saddam");
+context.push('/addCompanyScreen');
+                          },
                         ),
                       ],
                     ),
@@ -78,18 +84,15 @@ class WelcomeScreen extends StatelessWidget {
                             SizedBox(height: PSizes.xs),
                             Text(
                               AppStrings.welcomeDesc,
-                              style: PAppStyles.heading1.copyWith(
-                                color: PAppColors.medium,
+                              style: PAppStyles.poppins( color: PAppColors.main,
                                 fontSize: PSizes.fontSizeESm,
-                              ),
+                                height: PSizes.paragraphSpacing, weight: FontWeight.w400,),
                             ),
                             Text(
                               AppStrings.welcomeDesc2,
-                              style: PAppStyles.heading1.copyWith(
-                                color: PAppColors.white,
-                                fontSize: PSizes.fontSizeESm,
-                                height: PSizes.paragraphSpacingLg,
-                              ),
+                              style: PAppStyles.poppins( color: PAppColors.white,
+                                fontSize: 10,
+                                height: PSizes.paragraphSpacing, weight: FontWeight.w400,),
                             ),
                           ],
                         ),
