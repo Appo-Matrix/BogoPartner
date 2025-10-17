@@ -8,6 +8,8 @@ class PAppColors {
   static const Color googleContainerColor = Color(0xFF5F7EC9); // Shade 100
   static const Color facebookContainarColor = Color(0xFF3F51B2); // Shade 100
   static const Color success = Color(0xFF79AD46);
+
+  // Orange Shades (Add in PAppColors class)
   static const Color orange = Color(0xFFFF6A3D);
   static const Color backGroundColor = Color(0xFF79AD46); // S
   /// ─────────────────────────────
@@ -24,6 +26,20 @@ class PAppColors {
   static const Color primary700 = Color(0xFF4E722C);
   static const Color primary800 = Color(0xFF39551F);
   static const Color primary900 = Color(0xFF253912);
+  static const Color orange100 = Color(0xFFFFF2ED);
+  static const Color orange200 = Color(0xFFFFD9CC);
+  static const Color orange300 = Color(0xFFFFB8A0);
+  static const Color orange400 = Color(0xFFFF9473);
+  static const Color orange500 = Color(0xFFFF6A3D); // Main orange
+  static const Color orange600 = Color(0xFFE55A2E);
+  static const Color orange700 = Color(0xFFCC4A20);
+  static const Color orange800 = Color(0xFFB33A12);
+  static const Color orange900 = Color(0xFF992A04);
+
+  // Shades of the Primary Green Color
+  static const Color lightest = Color(0xFFE6F3DB); // Shade 100
+  static const Color lighter = Color(0xFFCBE7B4); // Shade 200
+  static const Color light = Color(0xFFAEDC8C); // Shade 300
   static const Color medium = Color(0xFF92D064); // Shade 400
 
   static const Color black1000 = Color(

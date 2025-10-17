@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:partner_app/features/company/widgets/category_grid_selector.dart';
 import 'package:partner_app/features/company/widgets/custom_dropdown.dart';
+import '../../core/utils/common/widgets/app_buttons.dart';
 import '../../core/utils/constants/app_assets.dart';
 import '../../core/utils/constants/app_colors.dart';
 import '../../core/utils/constants/app_sizes.dart';
@@ -125,24 +126,17 @@ class _AddCompanyScreenState extends State<AddCompanyScreen> {
             ),
 
             const SizedBox(height: PSizes.spaceBtwSections),
-
             /// Continue Button
-            SizedBox(
-              width: double.infinity,
-              child: ElevatedButton(
-                onPressed: () {
-                  context.push('/descriptionDetailScreen');
-                },
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: PAppColors.primary500,
-                  padding: const EdgeInsets.symmetric(vertical: PSizes.md),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(PSizes.buttonRadius),
-                  ),
-                ),
-                child: Text("Continue", style: PAppStyles.button),
-              ),
+            AppButtons.simple(
+              text: 'Continue',
+              borderRadius: PSizes.fontSizeUMdLg,
+              onTap: () {
+                context.push('/descriptionDetailScreen');
+
+              },
             ),
+
+
           ],
         ),
       ),

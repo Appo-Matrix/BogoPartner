@@ -21,6 +21,7 @@ dependencies:
   permission_handler: ^12.0.1
   flutter_svg: ^2.2.1
   pinput: ^5.0.2
+  image_picker: ^1.2.0
 
 
 dev_dependencies:
@@ -35,8 +36,10 @@ flutter:
 
   uses-material-design: true
 
+  # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/
+    - assets/icons/
     - assets/fonts/
 
 

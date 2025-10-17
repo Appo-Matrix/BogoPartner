@@ -56,10 +56,9 @@ class PImages {
 
   static const String email = "assets/icons/email.svg";
   static const String name = "assets/icons/name.svg";
-  static const String sport = "assets/icons/sport.svg";
-  static const String hairDryer = "assets/icons/hair_dryer.svg";
-  static const String coupon = "assets/icons/coupon.svg";
-  static const String entertainment = "assets/icons/entertainment.svg";
+  static const String hairDryer = "assets/images/beauty.png";
+  static const String coupon = "assets/images/cupon.png";
+  static const String entertainment = "assets/images/entertemnet.png";
   static const String back = "assets/icons/back.svg";
   static const String down = "assets/icons/down.svg";
   static const String calendar = "assets/icons/calendar.svg";
@@ -67,10 +66,64 @@ class PImages {
   static const String user = "assets/icons/user.svg";
   static const String lock = "assets/icons/lock.svg";
   static const String lock2 = "assets/icons/lock2.svg";
+  static const String sports2 = "assets/images/sports.png";
+  static const String hotel2 = "assets/images/hotel-2 (1).png";
   static const String obscureIcon = "assets/icons/obscure_icon.svg";
 
 
   // Store images
 
   // filter category images
+  static const String menu = "assets/icons/menu.png";
+  static const String icon = "assets/icons/share.png";
+  static const String scan = "assets/icons/scan.png";
+  static const String logos = "assets/icons/logos.png";
+  static const String order = "assets/images/order.png";
+  static const String revenues = "assets/images/revenues.png";
+  static const String loyalty = "assets/images/loyalty.png";
+  static const String reviews = "assets/images/reviews.png";
+  static const String reservation = "assets/images/reservation.png";
+  static const String curve = "assets/images/curve.png";
+  static const String coins = "assets/images/coins.png";
+  static const String shop = "assets/images/shop.png";
+  static const String mock = "assets/images/mock.png";
+  static const String edit = "assets/icons/edit.png";
+  static const String profile = "assets/icons/profile.png";
+  static const String voices = "assets/icons/voices.png";
+  static const String payments = "assets/icons/payments.png";
+  static const String help = "assets/icons/helps.png";
+  static const String about = "assets/icons/about.png";
+  static const String logout = "assets/icons/logout.png";
+  static const String shops = "assets/images/shops.png";
+  static const String scanMe = "assets/images/scan.png";
+  static const String partner = "assets/images/partner.png";
+  static const String name = "assets/icons/name.png";
+  static const String names = "assets/icons/names.png";
+  static const String email = "assets/icons/email.png";
+  static const String phone = "assets/icons/Phone.png";
+  static const String lock = "assets/icons/Lock.png";
+  static const String edits = "assets/icons/edits.png";
+  static const String photos = "assets/images/photos.png";
+  static const String ball = "assets/images/ball.png";
+  static const String download = "assets/icons/download.png";
+  static const String dollar = "assets/icons/dollar.png";
+  static const String rocket = "assets/images/rocket.png";
+  static const String num = "assets/images/num.png";
+  static const String copy = "assets/icons/Copy.png";
+  static const String pub = "assets/icons/pub.png";
+  static const String locks = "assets/icons/locks.png";
+  static const String bag = "assets/icons/bag.png";
+  static const String pizzas = "assets/images/pizzas.png";
+  static const String stars = "assets/images/stars.png";
+  static const String winner = "assets/images/winner.png";
+  static const String activate = "assets/images/activate.png";
+  static const String image = "assets/images/image.png";
+  static const String reservations = "assets/images/reservations.png";
+  static const String upcoming = "assets/images/upcoming.png";
+  static const String preparation = "assets/images/preparation.png";
+  static const String rooms = "assets/images/rooms.png";
+  static const String children = "assets/images/children.png";
+  static const String adults = "assets/images/adults.png";
+  static const String vertical = "assets/images/vertical.png";
+  static const String date = "assets/icons/date.png";
 }

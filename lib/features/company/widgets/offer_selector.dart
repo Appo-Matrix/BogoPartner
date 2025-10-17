@@ -16,7 +16,7 @@ class OfferSelector extends StatelessWidget {
     required this.title,
     required this.value,
     required this.onChanged,
-    this.height = PSizes.buttonHeight * 3.3, // ~60
+    this.height = PSizes.buttonHeight, // ~60
     this.backgroundColor = PAppColors.darkSurface,
     this.borderRadius = PSizes.cardRadiusLg, // ~16
   });

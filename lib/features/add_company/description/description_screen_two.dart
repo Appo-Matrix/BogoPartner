@@ -8,7 +8,6 @@ import '../../../core/utils/constants/app_colors.dart';
 import '../../../core/utils/constants/app_sizes.dart';
 import '../../../core/utils/constants/app_styles.dart';
 import '../../business_details_form/description/widgets/custom_position_box.dart';
-import '../../business_details_form/description/widgets/custom_select_box.dart';
 import '../../business_details_form/description/widgets/custom_tap_box.dart';
 import '../../business_details_form/description/widgets/discripton_text_field.dart';
 import '../../business_details_form/description/widgets/file_upload_box.dart';
@@ -49,7 +48,7 @@ class _DescriptionScreenTwoState extends State<DescriptionScreenTwo> {
 
   // ---- FIX: no 'late', give safe defaults
   List<bool> _enabled = const [];
-  List<String> _open = const []; // default labels shown on pills
+  List<String> _open = const [];
   List<String> _close = const [];
 
   @override
@@ -75,7 +74,7 @@ class _DescriptionScreenTwoState extends State<DescriptionScreenTwo> {
 
   @override
   Widget build(BuildContext context) {
-    _ensureDayLists(); // <-- FIX applied here too
+    _ensureDayLists();
 
     return Scaffold(
       backgroundColor: PAppColors.black1000,
