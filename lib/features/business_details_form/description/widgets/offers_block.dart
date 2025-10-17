@@ -36,6 +36,7 @@ class OffersBlock extends StatelessWidget {
             Expanded(
               child: Container(
                 height: 92,
+                width: double.infinity,
                 decoration: BoxDecoration(
                   color: PAppColors.black900,
                   borderRadius: BorderRadius.circular(28),
@@ -44,7 +45,7 @@ class OffersBlock extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Container(
-                      height: 76,
+                      height: 80,
                       width: 217,
                       decoration: BoxDecoration(
                         color: PAppColors.black1000,
@@ -99,7 +100,7 @@ class OffersBlock extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Container(
-                      height: 76,
+                      height: 80,
                       width: 217,
                       decoration: BoxDecoration(
                         color: PAppColors.black1000,
@@ -157,14 +158,14 @@ class CounterPill extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 76,
+      height: 80,
       width: 120,
       decoration: BoxDecoration(
         color: PAppColors.black800,
-        borderRadius: BorderRadius.circular(24),
+        borderRadius: BorderRadius.circular(28),
       ),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           InkWell(
             onTap: onPlus,

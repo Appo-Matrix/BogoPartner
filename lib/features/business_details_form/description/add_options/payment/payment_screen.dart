@@ -17,8 +17,6 @@ class _PaymentScreenState extends State<PaymentScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final total = (price - discount).clamp(0, double.infinity);
-
     return Scaffold(
       backgroundColor: PAppColors.black1000,
 

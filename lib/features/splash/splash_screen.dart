@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import '../../core/utils/constants/app_assets.dart';
 import '../../core/utils/constants/app_colors.dart';
 
 class SplashScreen extends StatefulWidget {
   final String nextLocation;
 
-  const SplashScreen({super.key, this.nextLocation = '/businessDetailsFormScreen'});
+  const SplashScreen({super.key, this.nextLocation = '/secondDashboardScreen'});
 
   @override
   State<SplashScreen> createState() => _SplashScreenState();
@@ -30,9 +31,7 @@ class _SplashScreenState extends State<SplashScreen> {
       body: SafeArea(
         child: Stack(
           children: [
-            Center(
-              child: Image.asset("assets/images/app_logo.png", width: 250),
-            ),
+            Center(child: Image.asset(PImages.logos, width: 250)),
             Align(
               alignment: Alignment.bottomCenter,
               child: Padding(

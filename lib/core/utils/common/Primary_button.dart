@@ -28,13 +28,13 @@ class PrimaryButton extends StatelessWidget {
           backgroundColor: PAppColors.main,
           foregroundColor: PAppColors.white,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(32),
+            borderRadius: BorderRadius.circular(46),
           ),
         ),
         child: Text(
           text,
           style: const TextStyle(
-            fontSize: PSizes.fontSizeMd,
+            fontSize: PSizes.fontSizeLg,
             fontWeight: FontWeight.w600,
             color: PAppColors.white,
           ),
