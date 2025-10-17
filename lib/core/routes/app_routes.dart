@@ -5,6 +5,7 @@ import 'package:partner_app/features/company/add_company_screen.dart';
 import '../../features/add_company/description/add_options/add_option_screen.dart';
 import '../../features/add_company/description/add_options/payment/payment_screen.dart';
 import '../../features/add_company/description/add_options/payment/pending_approval/pending_approval_screen.dart';
+import '../../features/add_company/description/description_screen_two.dart';
 import '../../features/auth/screens/login_screen.dart';
 import '../../features/auth/screens/otp_verification_done_screen.dart';
 import '../../features/auth/screens/otp_verification_screen.dart';
@@ -14,9 +15,7 @@ import '../../features/auth/screens/subscription_duration_screen.dart';
 import '../../features/business_details_form/business_details_form_screen.dart';
 import '../../features/company/description_detail_screen.dart';
 import '../../features/auth/screens/welcome_screen.dart';
-import '../../features/business_details_form/description/add_options/add_option_screen.dart';
-import '../../features/business_details_form/description/add_options/payment/payment_screen.dart';
-import '../../features/business_details_form/description/add_options/payment/pending_approval/pending_approval_screen.dart';
+
 import '../../features/business_details_form/description/description_screen.dart';
 import '../../features/second_dashboard/active_subscription/active_subscription_screen.dart';
 import '../../features/second_dashboard/booking/booking_screen.dart';
@@ -28,7 +27,7 @@ import '../../features/second_dashboard/order_dashboard/order_dashboard_screen.d
 import '../../features/second_dashboard/order_detail/order__details_screen.dart';
 import '../../features/second_dashboard/payment/payments_screen.dart';
 import '../../features/second_dashboard/rating/rating_screen.dart';
-import '../../features/second_dashboard/registration/registration_screen.dart';
+import '../../features/second_dashboard/registration/registration_screen.dart' hide RegistrationScreen;
 import '../../features/second_dashboard/second_dashboard_screen.dart';
 import '../../features/second_dashboard/setting/setting_screen.dart';
 import '../../features/second_dashboard/shop/shop_screen.dart';
@@ -156,11 +155,6 @@ class AppRouter {
           const DescriptionScreenTwo(),
           state,
         ),
-      ),
-      GoRoute(
-        path: '/addOptionsScreen',
-        pageBuilder: (context, state) =>
-            NavigationHelper.slideFromRight(const AddOptionsScreen(), state),
       ),
       GoRoute(
         path: '/secondDashboardScreen',
