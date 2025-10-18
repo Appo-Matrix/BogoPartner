@@ -1,7 +1,5 @@
-
 import 'package:go_router/go_router.dart';
 import 'package:partner_app/features/company/add_company_screen.dart';
-
 import '../../features/add_company/description/add_options/add_option_screen.dart';
 import '../../features/add_company/description/add_options/payment/payment_screen.dart';
 import '../../features/add_company/description/add_options/payment/pending_approval/pending_approval_screen.dart';
@@ -15,26 +13,23 @@ import '../../features/auth/screens/subscription_duration_screen.dart';
 import '../../features/business_details_form/business_details_form_screen.dart';
 import '../../features/company/description_detail_screen.dart';
 import '../../features/auth/screens/welcome_screen.dart';
-
 import '../../features/business_details_form/description/description_screen.dart';
 import '../../features/second_dashboard/active_subscription/active_subscription_screen.dart';
 import '../../features/second_dashboard/booking/booking_screen.dart';
 import '../../features/second_dashboard/business_setup/business_setup_screen.dart';
 import '../../features/second_dashboard/contact_support/contact_support_screen.dart';
 import '../../features/second_dashboard/invoices/invoices_screen.dart';
+import '../../features/second_dashboard/mdify_reservation/modify_reservation_screen.dart';
 import '../../features/second_dashboard/offer/offer_screen.dart';
 import '../../features/second_dashboard/order_dashboard/order_dashboard_screen.dart';
 import '../../features/second_dashboard/order_detail/order__details_screen.dart';
 import '../../features/second_dashboard/payment/payments_screen.dart';
 import '../../features/second_dashboard/rating/rating_screen.dart';
-import '../../features/second_dashboard/registration/registration_screen.dart' hide RegistrationScreen;
 import '../../features/second_dashboard/second_dashboard_screen.dart';
 import '../../features/second_dashboard/setting/setting_screen.dart';
 import '../../features/second_dashboard/shop/shop_screen.dart';
 import '../../features/second_dashboard/subscription/subscription_screen.dart';
 import '../../features/splash/splash_screen.dart';
-
-import '../../features/business_details_form/description/description_screen.dart';
 import '../services/navigation_service.dart';
 
 class AppRouter {
@@ -238,6 +233,11 @@ class AppRouter {
         path: '/bookingScreen',
         pageBuilder: (context, state) =>
             NavigationHelper.slideFromRight(const BookingScreen(), state),
+      ),
+      GoRoute(
+        path: '/modifyReservationScreen',
+        pageBuilder: (context, state) =>
+            NavigationHelper.slideFromRight(const ModifyReservationScreen(), state),
       ),
     ],
   );

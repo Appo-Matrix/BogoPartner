@@ -5,8 +5,6 @@ import 'package:partner_app/features/second_dashboard/order_dashboard/widgets/ac
 import 'package:partner_app/features/second_dashboard/order_dashboard/widgets/offer_states_card.dart';
 import 'package:partner_app/features/second_dashboard/order_dashboard/widgets/order_stats_card.dart';
 import '../../../core/utils/common/bogo_app_bar.dart';
-import '../../../core/utils/constants/app_sizes.dart';
-import '../../../core/utils/constants/app_styles.dart';
 
 class OrderDashboardScreen extends StatefulWidget {
   const OrderDashboardScreen({super.key});

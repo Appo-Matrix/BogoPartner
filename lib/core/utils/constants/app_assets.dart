@@ -122,4 +122,6 @@ class PImages {
   static const String adults = "assets/images/adults.png";
   static const String vertical = "assets/images/vertical.png";
   static const String date = "assets/icons/date.png";
+  static const String light = "assets/icons/light.png";
+  static const String frees = "assets/images/frees.png";
 }
