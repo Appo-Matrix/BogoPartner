@@ -5,6 +5,7 @@ import 'package:partner_app/features/company/add_company_screen.dart';
 import '../../features/add_company/description/add_options/add_option_screen.dart';
 import '../../features/add_company/description/add_options/payment/payment_screen.dart';
 import '../../features/add_company/description/add_options/payment/pending_approval/pending_approval_screen.dart';
+import '../../features/add_company/description/description_screen_two.dart';
 import '../../features/auth/screens/login_screen.dart';
 import '../../features/auth/screens/otp_verification_done_screen.dart';
 import '../../features/auth/screens/otp_verification_screen.dart';
@@ -14,6 +15,28 @@ import '../../features/auth/screens/subscription_duration_screen.dart';
 import '../../features/business_details_form/business_details_form_screen.dart';
 import '../../features/company/description_detail_screen.dart';
 import '../../features/auth/screens/welcome_screen.dart';
+import '../../features/business_details_form/description/description_screen.dart';
+import '../../features/second_dashboard/active_subscription/active_subscription_screen.dart';
+import '../../features/second_dashboard/ad_setup/ad_setup_screen.dart';
+import '../../features/second_dashboard/ads_management/ads_management_screen.dart';
+import '../../features/second_dashboard/booking/booking_screen.dart';
+import '../../features/second_dashboard/business_setup/business_setup_screen.dart';
+import '../../features/second_dashboard/complain/complain_screen.dart';
+import '../../features/second_dashboard/contact_support/contact_support_screen.dart';
+import '../../features/second_dashboard/invoices/invoices_screen.dart';
+import '../../features/second_dashboard/mdify_reservation/modify_reservation_screen.dart';
+import '../../features/second_dashboard/offer/offer_screen.dart';
+import '../../features/second_dashboard/order_dashboard/order_dashboard_screen.dart';
+
+import '../../features/second_dashboard/order_detail/order__details_screen.dart';
+import '../../features/second_dashboard/payment/payments_screen.dart';
+import '../../features/second_dashboard/rating/rating_screen.dart';
+import '../../features/second_dashboard/reviews/reviews_screen.dart';
+
+import '../../features/second_dashboard/second_dashboard_screen.dart';
+import '../../features/second_dashboard/setting/setting_screen.dart';
+import '../../features/second_dashboard/shop/shop_screen.dart';
+import '../../features/second_dashboard/subscription/subscription_screen.dart';
 import '../../features/splash/splash_screen.dart';
 
 import '../../features/business_details_form/description/description_screen.dart';
@@ -37,12 +60,14 @@ class AppRouter {
       GoRoute(
         path: '/addOptionScreen',
         pageBuilder: (context, state) =>
-            NavigationHelper.slideFromRight( AddOptionScreen(), state),
+            NavigationHelper.slideFromRight(AddOptionScreen(), state),
       ),
       GoRoute(
         path: '/descriptionDetailScreen',
-        pageBuilder: (context, state) =>
-            NavigationHelper.slideFromRight(const DescriptionDetailScreen(), state),
+        pageBuilder: (context, state) => NavigationHelper.slideFromRight(
+          const DescriptionDetailScreen(),
+          state,
+        ),
       ),
       GoRoute(
         path: '/splashScreen',
@@ -50,7 +75,6 @@ class AppRouter {
             NavigationHelper.slideFromRight(const SplashScreen(), state),
       ),
       GoRoute(
-
         path: '/loginScreen',
         pageBuilder: (context, state) =>
             NavigationHelper.slideFromRight(const LoginScreen(), state),
@@ -97,10 +121,11 @@ class AppRouter {
             NavigationHelper.slideFromRight(const SplashScreen(), state),
       ),
       GoRoute(
-
         path: '/businessDetailsFormScreen',
-        pageBuilder: (context, state) =>
-            NavigationHelper.slideFromRight(const BusinessDetailsFormScreen(), state),
+        pageBuilder: (context, state) => NavigationHelper.slideFromRight(
+          const BusinessDetailsFormScreen(),
+          state,
+        ),
       ),
       GoRoute(
         path: '/descriptionScreen',
@@ -119,13 +144,132 @@ class AppRouter {
       ),
       GoRoute(
         path: '/pendingApprovalScreen',
-        pageBuilder: (context, state) =>
-            NavigationHelper.slideFromRight(const PendingApprovalScreen(), state),
+        pageBuilder: (context, state) => NavigationHelper.slideFromRight(
+          const PendingApprovalScreen(),
+          state,
+        ),
       ),
       GoRoute(
         path: '/addCompanyScreen',
         pageBuilder: (context, state) =>
             NavigationHelper.slideFromRight(const AddCompanyScreen(), state),
+      ),
+      GoRoute(
+        path: '/descriptionScreenTwo',
+        pageBuilder: (context, state) => NavigationHelper.slideFromRight(
+          const DescriptionScreenTwo(),
+          state,
+        ),
+      ),
+      GoRoute(
+        path: '/secondDashboardScreen',
+        pageBuilder: (context, state) => NavigationHelper.slideFromRight(
+          const SecondDashboardScreen(),
+          state,
+        ),
+      ),
+      GoRoute(
+        path: '/offerScreen',
+        pageBuilder: (context, state) =>
+            NavigationHelper.slideFromRight(const OfferScreen(), state),
+      ),
+      GoRoute(
+        path: '/paymentsScreen',
+        pageBuilder: (context, state) =>
+            NavigationHelper.slideFromRight(const PaymentsScreen(), state),
+      ),
+      GoRoute(
+        path: '/settingScreen',
+        pageBuilder: (context, state) =>
+            NavigationHelper.slideFromRight(const SettingScreen(), state),
+      ),
+      GoRoute(
+        path: '/shopScreen',
+        pageBuilder: (context, state) =>
+            NavigationHelper.slideFromRight(const ShopScreen(), state),
+      ),
+      GoRoute(
+        path: '/registrationScreen',
+        pageBuilder: (context, state) =>
+            NavigationHelper.slideFromRight(const RegistrationScreen(), state),
+      ),
+      GoRoute(
+        path: '/businessSetupScreen',
+        pageBuilder: (context, state) =>
+            NavigationHelper.slideFromRight(const BusinessSetupScreen(), state),
+      ),
+      GoRoute(
+        path: '/invoicesScreen',
+        pageBuilder: (context, state) =>
+            NavigationHelper.slideFromRight(const InvoicesScreen(), state),
+      ),
+      GoRoute(
+        path: '/subscriptionScreen',
+        pageBuilder: (context, state) =>
+            NavigationHelper.slideFromRight(const SubscriptionScreen(), state),
+      ),
+      GoRoute(
+        path: '/activeSubscriptionScreen',
+        pageBuilder: (context, state) => NavigationHelper.slideFromRight(
+          const ActiveSubscriptionScreen(),
+          state,
+        ),
+      ),
+      GoRoute(
+        path: '/contactSupportScreen',
+        pageBuilder: (context, state) => NavigationHelper.slideFromRight(
+          const ContactSupportScreen(),
+          state,
+        ),
+      ),
+      GoRoute(
+        path: '/orderDashboardScreen',
+        pageBuilder: (context, state) => NavigationHelper.slideFromRight(
+          const OrderDashboardScreen(),
+          state,
+        ),
+      ),
+      GoRoute(
+        path: '/orderDetailsScreen',
+        pageBuilder: (context, state) =>
+            NavigationHelper.slideFromRight(const OrderDetailsScreen(), state),
+      ),
+      GoRoute(
+        path: '/ratingScreen',
+        pageBuilder: (context, state) =>
+            NavigationHelper.slideFromRight(const RatingScreen(), state),
+      ),
+      GoRoute(
+        path: '/bookingScreen',
+        pageBuilder: (context, state) =>
+            NavigationHelper.slideFromRight(const BookingScreen(), state),
+      ),
+      GoRoute(
+        path: '/modifyReservationScreen',
+        pageBuilder: (context, state) => NavigationHelper.slideFromRight(
+          const ModifyReservationScreen(),
+          state,
+        ),
+      ),
+      GoRoute(
+        path: '/reviewsScreen',
+        pageBuilder: (context, state) =>
+            NavigationHelper.slideFromRight(const ReviewsScreen(), state),
+      ),
+      GoRoute(
+        path: '/complainScreen',
+        pageBuilder: (context, state) =>
+            NavigationHelper.slideFromRight(const ComplainScreen(), state),
+      ),
+      GoRoute(
+        path: '/adsManagementScreen',
+        pageBuilder: (context, state) =>
+            NavigationHelper.slideFromRight(const AdsManagementScreen(), state),
+      ),
+      GoRoute(
+        path: '/adSetupScreen',
+        pageBuilder: (context, state) =>
+            NavigationHelper.slideFromRight(const AdSetupScreen(), state),
       ),
     ],
   );
