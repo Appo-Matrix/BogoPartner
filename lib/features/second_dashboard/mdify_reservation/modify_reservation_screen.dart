@@ -27,11 +27,15 @@ class _ModifyReservationScreenState extends State<ModifyReservationScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: PAppColors.black1000,
+      
+      // App Bar
       appBar: const BogoAppBar(
         title: "Modify",
         showTitle: true,
         showBackIcon: true,
       ),
+
+      // Body
       body: Stack(
         children: [
           // Scrollable content

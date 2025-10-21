@@ -5,6 +5,7 @@ import 'package:partner_app/features/second_dashboard/booking/widgets/dashboard_
 import 'package:partner_app/features/second_dashboard/booking/widgets/preparation_widget.dart';
 import 'package:partner_app/features/second_dashboard/booking/widgets/reservation_widget.dart';
 import 'package:partner_app/features/second_dashboard/booking/widgets/upcoming_widget.dart';
+
 import '../../../core/utils/common/bogo_app_bar.dart';
 
 class BookingScreen extends StatefulWidget {
@@ -35,12 +36,18 @@ class _BookingScreenState extends State<BookingScreen> {
     return Scaffold(
       backgroundColor: PAppColors.black1000,
 
-      appBar: const BogoAppBar(
-        title: "Reservation",
+      // App Bar
+      appBar: BogoAppBar(
+        title: "Client Details",
         showTitle: true,
         showBackIcon: true,
+        showActions: true,
+        actionText: "Archive",
+        onActionTap: () {},
+        onBackPressed: () {},
       ),
 
+      // Body
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 16),
         child: Column(

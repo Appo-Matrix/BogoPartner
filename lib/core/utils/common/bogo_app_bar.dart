@@ -2,11 +2,15 @@ import 'package:flutter/material.dart';
 import '../../../../core/utils/constants/app_colors.dart';
 import '../../../../core/utils/constants/app_sizes.dart';
 import '../../../../core/utils/constants/app_styles.dart';
+import '../../../../core/utils/constants/app_assets.dart';
 
 class BogoAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String? title;
   final bool showTitle;
   final bool showBackIcon;
+  final bool showActions;
+  final String? actionText;
+  final VoidCallback? onActionTap;
   final Color backgroundColor;
   final VoidCallback? onBackPressed;
 
@@ -15,6 +19,9 @@ class BogoAppBar extends StatelessWidget implements PreferredSizeWidget {
     this.title,
     this.showTitle = true,
     this.showBackIcon = true,
+    this.showActions = false,
+    this.actionText,
+    this.onActionTap,
     this.backgroundColor = PAppColors.black1000,
     this.onBackPressed,
   });
@@ -42,28 +49,42 @@ class BogoAppBar extends StatelessWidget implements PreferredSizeWidget {
               ),
             )
           : null,
+
+      actions: showActions
+          ? [
+              Padding(
+                padding: const EdgeInsets.only(right: 16.0),
+                child: Container(
+                  height: 31,
+                  width: 117,
+                  decoration: BoxDecoration(
+                    color: PAppColors.black900,
+                    borderRadius: BorderRadius.circular(24),
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Image.asset(PImages.archives, height: 19, width: 19),
+                      InkWell(
+                        onTap: onActionTap ?? () {},
+                        child: Text(
+                          actionText ?? "Action",
+                          style: PAppStyles.poppins(
+                            color: PAppColors.white,
+                            fontSize: 16,
+                            weight: FontWeight.w400,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ]
+          : null,
     );
   }
 
   @override
   Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 }
-
-
-// appBar: const BogoAppBar(
-// title: "Settings",
-// showTitle: true,
-// showBackIcon: true,
-// ),
-//
-// appBar: const BogoAppBar(
-// showTitle: false,
-// showBackIcon: true,
-// ),
-//
-//
-// appBar: const BogoAppBar(
-// title: "Dashboard",
-// showTitle: true,
-// showBackIcon: false,
-// ),
