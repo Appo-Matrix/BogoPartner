@@ -71,9 +71,7 @@ class PSizes {
 
   // Border Radius
   static const double borderRadiusXSm = 12.0;
-  static const double borderRadiusSm = 14.0;
-  static const double borderRadiusMd = 16.0;
-  static const double borderRadiusLg = 24.0;
+
   static const double borderRadiusXLg = 32.0;
 
   // Divider

@@ -63,7 +63,6 @@ class PAppColors {
   /// ─────────────────────────────
   static const Color black = Color(0xFF000000);
 
-  static const Color light = lightBackground;
   static const Color dark = darkBackground;
 
   /// ─────────────────────────────
