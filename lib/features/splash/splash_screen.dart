@@ -6,7 +6,7 @@ import '../../core/utils/constants/app_colors.dart';
 class SplashScreen extends StatefulWidget {
   final String nextLocation;
 
-  const SplashScreen({super.key, this.nextLocation = '/bookingScreen'});
+  const SplashScreen({super.key, this.nextLocation = '/adSetupScreen'});
 
   @override
   State<SplashScreen> createState() => _SplashScreenState();
@@ -31,12 +31,7 @@ class _SplashScreenState extends State<SplashScreen> {
       body: SafeArea(
         child: Stack(
           children: [
-            Center(
-              child: Image.asset(
-                PImages.logoPartner,
-                width: 250,
-              ),
-            ),
+            Center(child: Image.asset(PImages.logoPartner, width: 250)),
 
             // Loader at bottom
             Align(

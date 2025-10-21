@@ -124,4 +124,13 @@ class PImages {
   static const String date = "assets/icons/date.png";
   static const String light = "assets/icons/light.png";
   static const String frees = "assets/images/frees.png";
+  static const String archives = "assets/images/archives.png";
+  static const String gold = "assets/icons/gold.png";
+  static const String star = "assets/icons/stars.png";
+  static const String sends = "assets/icons/sends.png";
+  static const String ads = "assets/icons/ads.png";
+  static const String manage = "assets/icons/manage.png";
+  static const String homePage = "assets/images/home.png";
+  static const String store = "assets/images/store.png";
+  static const String info = "assets/icons/info.png";
 }
