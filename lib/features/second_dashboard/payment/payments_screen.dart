@@ -1,18 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
-import 'package:partner_app/core/utils/constants/app_assets.dart';
-import 'package:partner_app/core/utils/constants/app_colors.dart';
-import 'package:partner_app/core/utils/constants/app_sizes.dart';
-import 'package:partner_app/core/utils/constants/app_styles.dart';
+import '../../../core/utils/constants/app_assets.dart';
+import '../../../core/utils/constants/app_colors.dart';
+import '../../../core/utils/constants/app_sizes.dart';
+import '../../../core/utils/constants/app_styles.dart';
 
-class PaymentScreen extends StatefulWidget {
-  const PaymentScreen({super.key});
+class PaymentsScreen extends StatefulWidget {
+  const PaymentsScreen({super.key});
 
   @override
-  State<PaymentScreen> createState() => _PaymentScreenState();
+  State<PaymentsScreen> createState() => _PaymentsScreenState();
 }
 
-class _PaymentScreenState extends State<PaymentScreen> {
+class _PaymentsScreenState extends State<PaymentsScreen> {
   double price = 5000;
   double discount = 5000;
 
@@ -263,9 +262,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                         Spacer(),
 
                         InkWell(
-                          onTap: () {
-                            context.push("/pendingApprovalScreen");
-                          },
+                          onTap: () {},
                           borderRadius: BorderRadius.circular(999),
                           child: Container(
                             height: 79,

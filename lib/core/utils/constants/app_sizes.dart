@@ -1,4 +1,7 @@
 class PSizes {
+  static const double statCardHeight = 154.0;
+  static const double statCardWidth = 124.0;
+
   // Paddings and margin sizes
   static const double xs = 4.0;
   static const double sm = 8.0;
@@ -13,6 +16,7 @@ class PSizes {
   static const double iconSms = 22;
   static const double iconMd = 24.0;
   static const double iconLg = 32.0;
+  static const double iconXl = 40.0;
   static const double iconXLg = 64.0;
 
   //Font Size
@@ -22,8 +26,9 @@ class PSizes {
   static const double fontSizeSm = 14.0;
   static const double fontSizeSmx = 15.0;
   static const double fontSizeMd = 16.0;
-  static const double fontSizeLg = 18.0;
   static const double fontSizeLgx = 24.0;
+  static const double fontSizeLg = 18.0;
+  static const double fontSizeXl = 20.0;
   static const double fontSizeLgx2 = 36.0;
   static const double fontSizeUL = 44.0;
   static const double fontSizeUMdLg = 48.0;
@@ -70,6 +75,10 @@ class PSizes {
   static const double spaceBtwSectionsXLg = 280.0;
 
   // Border Radius
+  static const double borderRadiusSm = 4.0;
+  static const double borderRadiusMd = 8.0;
+  static const double borderRadiusLg = 12.0;
+  static const double borderRadiusXl = 16.0;
   static const double borderRadiusXSm = 12.0;
 
   static const double borderRadiusXLg = 32.0;
