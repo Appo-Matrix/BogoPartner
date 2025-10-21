@@ -4,7 +4,6 @@ import 'package:partner_app/core/utils/common/widgets/app_buttons.dart';
 import 'package:partner_app/core/utils/constants/app_assets.dart';
 import 'package:partner_app/core/utils/constants/app_strings.dart';
 import 'package:partner_app/core/utils/constants/app_styles.dart';
-import '../../../core/utils/common/widgets/custom_app_bar.dart';
 import '../../../core/utils/constants/app_colors.dart';
 import '../../../core/utils/constants/app_sizes.dart';
 

@@ -1,26 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
-import 'package:partner_app/core/utils/constants/app_assets.dart';
-import 'package:partner_app/core/utils/constants/app_colors.dart';
+import '../../../../core/utils/constants/app_assets.dart';
+import '../../../../core/utils/constants/app_colors.dart';
 import '../../active_subscription/widgets/dotted_divider.dart';
-import 'action_button_card.dart';
 import 'custom_date_row.dart';
 import 'custom_hotel_card.dart';
 import 'custom_message_title.dart';
 import 'info_state_tile.dart';
 
-class ReservationWidget extends StatefulWidget {
-  const ReservationWidget({super.key});
+class UpcomingWidget extends StatefulWidget {
+  const UpcomingWidget({super.key});
 
   @override
-  State<ReservationWidget> createState() => _ReservationWidgetState();
+  State<UpcomingWidget> createState() => _UpcomingWidgetState();
 }
 
-class _ReservationWidgetState extends State<ReservationWidget> {
+class _UpcomingWidgetState extends State<UpcomingWidget> {
   @override
   Widget build(BuildContext context) {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Container(
           height: 350,
@@ -96,34 +93,6 @@ class _ReservationWidgetState extends State<ReservationWidget> {
               ),
             ],
           ),
-        ),
-        SizedBox(height: 15),
-
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            ActionButtonCard(
-              text: "Modify",
-              backgroundColor: PAppColors.black800,
-              onTap: () {
-                context.go("/modifyReservationScreen");
-              },
-            ),
-            ActionButtonCard(
-              text: "Reject",
-              backgroundColor: PAppColors.error700,
-              onTap: () {
-                // your action here
-              },
-            ),
-            ActionButtonCard(
-              text: "Accept",
-              backgroundColor: PAppColors.dark,
-              onTap: () {
-                // your action here
-              },
-            ),
-          ],
         ),
       ],
     );

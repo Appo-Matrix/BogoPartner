@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:partner_app/core/utils/common/widgets/app_buttons.dart';
-import 'package:partner_app/core/utils/common/widgets/custom_app_bar.dart';
 import 'package:partner_app/core/utils/constants/app_colors.dart';
 import 'package:partner_app/core/utils/constants/app_strings.dart';
 import 'package:partner_app/features/auth/widgets/image_text_list_tile.dart';

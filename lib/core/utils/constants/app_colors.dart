@@ -26,12 +26,8 @@ class PAppColors {
   static const Color primary900 = Color(0xFF253912);
   static const Color medium = Color(0xFF92D064); // Shade 400
 
-  static const Color black1000 = Color(
-    0xFF0A0A0A,
-  );
-  static const Color black900 = Color(
-    0xFF171717,
-  ); //
+  static const Color black1000 = Color(0xFF0A0A0A);
+  static const Color black900 = Color(0xFF171717); //
   // Neutral / Black Colors for dark themes and general UI
   static const Color black100 = Color(
     0xFFF5F5F5,
@@ -52,11 +48,7 @@ class PAppColors {
   static const Color black700 = Color(
     0xFF404040,
   ); // Deeper gray for strong text
-  static const Color black800 = Color(
-    0xFF262626,
-  );
-
-
+  static const Color black800 = Color(0xFF262626);
 
   /// ─────────────────────────────
   /// Base Colors
@@ -92,14 +84,16 @@ class PAppColors {
   static const Color gray700 = Color(0xFF344054);
   static const Color gray800 = Color(0xFF182230);
   static const Color gray900 = Color(0xFF101828);
+
   /// ─────────────────────────────
   /// Extended Dark Grays
   /// ─────────────────────────────
   static const Color darkGray950 = Color(0xFF0A0A0A); // near black
-  static const Color darkGray925 = Color(0xFF121212); // typical Android dark theme base
+  static const Color darkGray925 = Color(
+    0xFF121212,
+  ); // typical Android dark theme base
   static const Color darkGray850 = Color(0xFF1A1A1A);
   static const Color darkGray750 = Color(0xFF222222);
-
 
   /// Aliases for readability (Light Grays)
   static const Color lightGray50 = gray50;
@@ -114,7 +108,6 @@ class PAppColors {
   static const Color lightGray900 = gray900;
 
   /// Aliases for readability (Dark Grays / Blacks)
-
 
   /// ─────────────────────────────
   /// Error (Red) Palette
@@ -134,7 +127,6 @@ class PAppColors {
   /// Warning (Amber/Orange) Palette
   /// ─────────────────────────────
   static const Color warning50 = Color(0xFFFFFBEB);
-
 
   /// ─────────────────────────────
   /// Success (Green/Teal) Palette

@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-
-import '../../../core/utils/constants/app_assets.dart';
 import '../../../core/utils/constants/app_colors.dart';
 import '../../../core/utils/constants/app_sizes.dart';
-import '../../../core/utils/constants/app_strings.dart';
 import '../../../core/utils/constants/app_styles.dart';
 
 class ImageTextListTile extends StatelessWidget {
