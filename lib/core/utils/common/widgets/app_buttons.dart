@@ -9,8 +9,9 @@ enum Button { simple, switchButton, square, radioSquare }
 class AppButtons extends StatefulWidget {
   final Button type;
   VoidCallback? onTap;
-  final String text;
+  final String? text;
   final dynamic imageIcon;
+  final double? size;
   String? selectedValue;
   final ValueChanged? onChanged;
   final double borderRadius;
@@ -29,13 +30,15 @@ class AppButtons extends StatefulWidget {
        iconColor = null,
        onChanged = null,
        selectedValue = '',
+       size = null,
        imageIcon = '';
 
   AppButtons.square({
     required this.imageIcon,
-    this.buttonColor = PAppColors.darkGray750,
+    this.size = PSizes.imageThumbSize,
+    this.buttonColor = PAppColors.black800,
     this.iconColor = PAppColors.white,
-    required this.text,
+    this.text,
     required this.onTap,
     super.key,
   }) : type = Button.square,
@@ -51,9 +54,10 @@ class AppButtons extends StatefulWidget {
     required this.selectedValue,
     super.key,
   }) : type = Button.radioSquare,
-       buttonColor = PAppColors.darkGray750,
+       buttonColor = PAppColors.black800,
        isOutlined = false,
        iconColor = null,
+       size = null,
        onTap = null,
        borderRadius = PSizes.borderRadiusXLg;
 
@@ -66,6 +70,7 @@ class AppButtons extends StatefulWidget {
        selectedValue = '',
        onChanged = null,
        iconColor = null,
+       size = null,
        text = '',
        imageIcon = '',
        isOutlined = false;
@@ -98,12 +103,12 @@ class _AppButtonsState extends State<AppButtons> {
           height: PSizes.buttonHeight,
           width: PSizes.buttonWidth,
           decoration: BoxDecoration(
-            color: widget.isOutlined ? PAppColors.darkGray750 : widget.buttonColor,
+            color: widget.isOutlined ? PAppColors.black800 : widget.buttonColor,
             borderRadius: BorderRadius.circular(widget.borderRadius),
           ),
           child: Center(
             child: Text(
-              widget.text,
+              widget.text!,
               style: PAppStyles.heading2.copyWith(
                 color: PAppColors.white,
                 fontSize: PSizes.fontSizeLg,
@@ -139,18 +144,17 @@ class _AppButtonsState extends State<AppButtons> {
       children: [
         GestureDetector(
           onTap: widget.onTap,
-
           child: Container(
-            height: PSizes.imageThumbSize,
-            width: PSizes.imageThumbSize,
+            height: widget.size,
+            width: widget.size,
             decoration: BoxDecoration(
               color: widget.buttonColor,
               borderRadius: BorderRadius.circular(widget.borderRadius),
             ),
             child: Center(
               child: SizedBox(
-                height: PSizes.iconMd,
-                width: PSizes.iconMd,
+                height: widget.size! / 3,
+                width: widget.size! / 3,
                 child: Center(
                   child: widget.imageIcon is IconData
                       ? Icon(widget.imageIcon, color: widget.iconColor)
@@ -163,8 +167,13 @@ class _AppButtonsState extends State<AppButtons> {
             ),
           ),
         ),
-        SizedBox(height: PSizes.sm),
-        Center(child: Text(widget.text)),
+        if (widget.text != null)
+          Column(
+            children: [
+              SizedBox(height: PSizes.sm),
+              Center(child: Text(widget.text!)),
+            ],
+          ),
       ],
     );
   }
@@ -191,7 +200,7 @@ class _AppButtonsState extends State<AppButtons> {
                       height: PSizes.iconMd,
                       width: PSizes.iconMd,
                       child: Center(
-                        child: Image.asset(
+                        child: SvgPicture.asset(
                           widget.imageIcon,
                           color: PAppColors.white,
                         ),
@@ -201,7 +210,7 @@ class _AppButtonsState extends State<AppButtons> {
                 ),
               ),
               SizedBox(height: PSizes.sm),
-              Center(child: Text(widget.text)),
+              Center(child: Text(widget.text!)),
               Transform.scale(
                 scale: PSizes.paragraphSpacing,
                 child: Radio(

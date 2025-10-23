@@ -23,6 +23,8 @@ class PImages {
   static const String verifiedIcon = "assets/images/verified_icon.png";
 
   static const String home = "assets/icons/home.png";
+  static const String imp = "assets/icons/imp.png";
+  static const String plus = "assets/icons/plus.png";
   static const String hotel = "assets/icons/hotel.png";
   static const String house = "assets/icons/house.png";
   static const String address = "assets/icons/address.png";
@@ -37,7 +39,6 @@ class PImages {
   static const String time = "assets/icons/time.png";
   static const String doc = "assets/icons/docs.png";
 
-
   static const String ai = "assets/icons/logoAi.png";
   static const String pending = "assets/images/pending.png";
   static const String loading = "assets/icons/loading.png";
@@ -51,10 +52,21 @@ class PImages {
   static const String icecream = "assets/images/icecream.png";
   static const String times = "assets/images/time.png";
 
-
   // Icons
 
   static const String email = "assets/icons/email.svg";
+  static const String handCash = "assets/icons/hand_cash.png";
+  static const String search = "assets/icons/search.svg";
+  static const String fullPizza = "assets/icons/full_pizza.png";
+  static const String percentToken = "assets/icons/percentage_token.png";
+  static const String edit = "assets/icons/edit.png";
+  static const String chef = "assets/icons/chef.png";
+  static const String notification = "assets/icons/notification_icon.svg";
+  static const String drawer = "assets/icons/drawer.svg";
+  static const String drawer2 = "assets/icons/drawer2.png";
+  static const String clipBoard = "assets/icons/clip_board.png";
+  static const String setting = "assets/icons/setting.png";
+  static const String info = "assets/icons/info.svg";
   static const String name = "assets/icons/name.svg";
   static const String hairDryer = "assets/images/beauty.png";
   static const String coupon = "assets/images/cupon.png";
@@ -68,11 +80,15 @@ class PImages {
   static const String lock2 = "assets/icons/lock2.svg";
   static const String sports2 = "assets/images/sports.png";
   static const String hotel2 = "assets/images/hotel-2 (1).png";
+  static const String gallery = "assets/icons/gallery_icon.png";
+  static const String tick = "assets/icons/tick_icon.png";
+  static const String next = "assets/icons/right_arrow.png";
   static const String obscureIcon = "assets/icons/obscure_icon.svg";
 
 
   // Store images
-
+  static const String custer = "assets/images/custer.png";
+  static const String hotel12 = "assets/images/hotel12.png";
   // filter category images
   static const String menu = "assets/icons/menu.png";
   static const String icon = "assets/icons/share.png";
@@ -87,7 +103,7 @@ class PImages {
   static const String coins = "assets/images/coins.png";
   static const String shop = "assets/images/shop.png";
   static const String mock = "assets/images/mock.png";
-  static const String edit = "assets/icons/edit.png";
+  static const String edit2 = "assets/icons/edit.png";
   static const String profile = "assets/icons/profile.png";
   static const String voices = "assets/icons/voices.png";
   static const String payments = "assets/icons/payments.png";
@@ -132,5 +148,5 @@ class PImages {
   static const String manage = "assets/icons/manage.png";
   static const String homePage = "assets/images/home.png";
   static const String store = "assets/images/store.png";
-  static const String info = "assets/icons/info.png";
+  static const String info2 = "assets/icons/info.png";
 }

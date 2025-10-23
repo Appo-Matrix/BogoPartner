@@ -6,11 +6,13 @@ class PAppColors {
   static const Color primary = Color(0xFF79AD46); // Background Color
   static const Color white = Color(0xFFFFFFFF); // Shade 100
   static const Color googleContainerColor = Color(0xFF5F7EC9); // Shade 100
-  static const Color facebookContainarColor = Color(0xFF3F51B2); // Shade 100
+  static const Color facebookContainerColor = Color(0xFF3F51B2); // Shade 100
   static const Color success = Color(0xFF79AD46);
 
   // Orange Shades (Add in PAppColors class)
   static const Color orange = Color(0xFFFF6A3D);
+  static const Color orangeMixRed = Color(0xFFFF5726);
+  static const Color purple500 = Color(0xFF673AB7);
   static const Color backGroundColor = Color(0xFF79AD46); // S
   /// ─────────────────────────────
   /// Primary Brand Color (Green)
@@ -64,14 +66,93 @@ class PAppColors {
   static const Color black700 = Color(
     0xFF404040,
   ); // Deeper gray for strong text
-  static const Color black800 = Color(0xFF262626);
+  static const Color black800 = Color(
+    0xFF262626,
+  ); // Very dark gray for surfaces
 
+  // Shades of the Primary Green Color
+  static const Color dark = Color(0xFF6D9C3F); // Shade 600
+  static const Color darker = Color(0xFF608B37); // Shade 700
+  static const Color darkest = Color(0xFF4A6A29); // Shade 800
+  static const Color deepest = Color(0xFF34481C); // Shade 900
+  static const Color deeper = Color(0xFF8BC255); // Shade 900
+
+  // text  mode grays
+  static const Color lightGray100 = Color(0xFFF2F4F7); // Lightest gray
+  static const Color lightGray200 = Color(0xFFEAECF0);
+  static const Color lightGray300 = Color(0xFFD0D5DD);
+  static const Color lightGray400 = Color(
+    0xFF98A2B3,
+  ); // Light gray (disabled text)
+  static const Color lightGray500 = Color(
+    0xFF667085,
+  ); // Neutral gray (body text)
+  static const Color lightGray600 = Color(
+    0xFF475467,
+  ); // Medium gray (strong text)
+  static const Color lightGray700 = Color(0xFF344054); // Darker gray
+  static const Color lightGray800 = Color(
+    0xFF182230,
+  ); // Dark gray (e.g., modal backgrounds)
+  static const Color lightGray900 = Color(0xFF101828); // Deepest gray
+  static const Color lightGray1000 = Color(0xFF1F2024); // Deepest gray
+
+  static const Color error100 = Color(
+    0xFFFEE4E2,
+  ); // Lightest red for background or subtle errors
+  static const Color error200 = Color(
+    0xFFFECDCA,
+  ); // Lighter red for small alerts
+  static const Color error300 = Color(0xFFFDA29B); // Light red for warning text
+  static const Color error400 = Color(
+    0xFFF97066,
+  ); // Medium red for error states
+  static const Color error500 = Color(
+    0xFFF04438,
+  ); // Standard error red (for primary error)
+  static const Color error600 = Color(
+    0xFFD92D20,
+  ); // Dark red for critical errors
+  static const Color error700 = Color(
+    0xFFB42318,
+  ); // Darker red for extreme errors
+  static const Color error800 = Color(0xFF912018); // Very dark red
+  static const Color error900 = Color(0xFF7A271A); // De
+
+  // Warning Colors for attention-grabbing actions or states
+  static const Color warning100 = Color(
+    0xFFFEF0C7,
+  ); // Lightest yellow for subtle warnings
+  static const Color warning200 = Color(
+    0xFFFEDF89,
+  ); // Lighter yellow for small alerts
+  static const Color warning300 = Color(
+    0xFFFEC84B,
+  ); // Light yellow for mild warning text
+  static const Color warning400 = Color(
+    0xFFFDB022,
+  ); // Medium yellow for attention-grabbing warnings
+  static const Color warning500 = Color(
+    0xFFF79009,
+  ); // Standard yellow for main warning
+  static const Color warning600 = Color(
+    0xFFDC6803,
+  ); // Dark yellow for more urgent warnings
+  static const Color warning700 = Color(
+    0xFFB54708,
+  ); // Darker yellow for critical warnings
+  static const Color warning800 = Color(
+    0xFF93370D,
+  ); // Very dark yellow for extreme warnings
+  static const Color warning900 = Color(
+    0xFF7A2E0E,
+  ); // Deepest yellow for fatal or dangerous warnings
+
+  static const Color facebookContainarColor = Color(0xFF3F51B2); // Shade 100
   /// ─────────────────────────────
   /// Base Colors
   /// ─────────────────────────────
   static const Color black = Color(0xFF000000);
-
-  static const Color dark = darkBackground;
 
   /// ─────────────────────────────
   /// Light Theme Base
@@ -110,34 +191,6 @@ class PAppColors {
   ); // typical Android dark theme base
   static const Color darkGray850 = Color(0xFF1A1A1A);
   static const Color darkGray750 = Color(0xFF222222);
-
-  /// Aliases for readability (Light Grays)
-  static const Color lightGray50 = gray50;
-  static const Color lightGray100 = gray100;
-  static const Color lightGray200 = gray200;
-  static const Color lightGray300 = gray300;
-  static const Color lightGray400 = gray400;
-  static const Color lightGray500 = gray500;
-  static const Color lightGray600 = gray600;
-  static const Color lightGray700 = gray700;
-  static const Color lightGray800 = gray800;
-  static const Color lightGray900 = gray900;
-
-  /// Aliases for readability (Dark Grays / Blacks)
-
-  /// ─────────────────────────────
-  /// Error (Red) Palette
-  /// ─────────────────────────────
-  static const Color error50 = Color(0xFFFEF2F2);
-  static const Color error100 = Color(0xFFFEE2E2);
-  static const Color error200 = Color(0xFFFECACA);
-  static const Color error300 = Color(0xFFFCA5A5);
-  static const Color error400 = Color(0xFFF87171);
-  static const Color error500 = Color(0xFFEF4444); // main error
-  static const Color error600 = Color(0xFFDC2626);
-  static const Color error700 = Color(0xFFB91C1C);
-  static const Color error800 = Color(0xFF991B1B);
-  static const Color error900 = Color(0xFF7F1D1D);
 
   /// ─────────────────────────────
   /// Warning (Amber/Orange) Palette
