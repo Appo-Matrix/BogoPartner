@@ -301,7 +301,7 @@ class _DescriptionScreenState extends State<DescriptionScreen> {
                 width: double.infinity,
                 height: 92,
                 onTap: () {
-                  context.go("/addOptionScreen");
+                  context.push("/secondDashboardScreen");
                 },
               ),
 
