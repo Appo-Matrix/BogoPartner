@@ -1,5 +1,4 @@
 import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import '../../../core/utils/constants/app_colors.dart';
@@ -21,8 +20,20 @@ class _FileUploadCardState extends State<FileUploadCard> {
   final List<XFile> _galleryImages = [];
 
   Future<void> _pickImage() async {
+    if (_galleryImages.length >= 3) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text("You can upload a maximum of 3 images."),
+          backgroundColor: Colors.redAccent,
+          duration: Duration(seconds: 2),
+        ),
+      );
+      return;
+    }
+
     final ImagePicker picker = ImagePicker();
     final XFile? image = await picker.pickImage(source: ImageSource.gallery);
+
     if (image != null) {
       setState(() {
         _galleryImages.add(image);
@@ -81,10 +92,12 @@ class _FileUploadCardState extends State<FileUploadCard> {
             height: 90,
             child: ListView.separated(
               scrollDirection: Axis.horizontal,
-              itemCount: _galleryImages.length + 1,
+              itemCount: _galleryImages.length < 3
+                  ? _galleryImages.length + 1
+                  : _galleryImages.length,
               separatorBuilder: (_, __) => const SizedBox(width: 12),
               itemBuilder: (context, index) {
-                if (index == _galleryImages.length) {
+                if (index == _galleryImages.length && _galleryImages.length < 3) {
                   // Add new photo button
                   return InkWell(
                     onTap: _pickImage,
@@ -102,14 +115,36 @@ class _FileUploadCardState extends State<FileUploadCard> {
                   );
                 } else {
                   // Show uploaded photo
-                  return ClipRRect(
-                    borderRadius: BorderRadius.circular(20),
-                    child: Image.file(
-                      File(_galleryImages[index].path),
-                      width: 80,
-                      height: 80,
-                      fit: BoxFit.cover,
-                    ),
+                  return Stack(
+                    children: [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(20),
+                        child: Image.file(
+                          File(_galleryImages[index].path),
+                          width: 80,
+                          height: 80,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                      Positioned(
+                        top: 4,
+                        right: 4,
+                        child: InkWell(
+                          onTap: () {
+                            setState(() {
+                              _galleryImages.removeAt(index);
+                            });
+                          },
+                          child: Container(
+                            decoration: BoxDecoration(
+                              color: Colors.black54,
+                              borderRadius: BorderRadius.circular(20),
+                            ),
+                            child: const Icon(Icons.close, color: Colors.white, size: 18),
+                          ),
+                        ),
+                      ),
+                    ],
                   );
                 }
               },

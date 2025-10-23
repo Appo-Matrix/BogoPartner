@@ -27,8 +27,6 @@ class PStatCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 154,
-      width: 124,
       decoration: BoxDecoration(
         color: color,
         borderRadius: BorderRadius.only(topLeft: Radius.circular(borderRadius)),

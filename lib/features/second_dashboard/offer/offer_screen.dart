@@ -1,8 +1,11 @@
+import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:partner_app/core/utils/constants/app_assets.dart';
 import 'package:partner_app/core/utils/constants/app_colors.dart';
 import 'package:partner_app/core/utils/constants/app_sizes.dart';
 import 'package:partner_app/core/utils/constants/app_styles.dart';
+import 'package:partner_app/features/second_dashboard/offer/widgets/clients_per_hour_chart.dart';
+import 'package:partner_app/features/second_dashboard/offer/widgets/customers_chart_row.dart';
 import 'package:partner_app/features/second_dashboard/offer/widgets/p_analytics_card.dart';
 import 'package:partner_app/features/second_dashboard/offer/widgets/p_date_range_card.dart';
 import 'package:partner_app/features/second_dashboard/offer/widgets/p_info_card.dart';
@@ -86,7 +89,7 @@ class _OfferScreenState extends State<OfferScreen> {
                 ],
               ),
 
-              SizedBox(height: 10),
+              SizedBox(height: PSizes.spaceBtwItems),
 
               // Bogo Dashboard
               Container(
@@ -131,7 +134,7 @@ class _OfferScreenState extends State<OfferScreen> {
                 ),
               ),
 
-              SizedBox(height: 10),
+              SizedBox(height: PSizes.spaceBtwItems),
 
               Row(
                 children: [
@@ -151,7 +154,7 @@ class _OfferScreenState extends State<OfferScreen> {
                   // Revenue
                   Container(
                     height: 154,
-                    width: 245,
+                    width: 208,
                     decoration: BoxDecoration(
                       color: Colors.lightGreen[400],
                       borderRadius: BorderRadius.only(
@@ -206,7 +209,7 @@ class _OfferScreenState extends State<OfferScreen> {
                 ],
               ),
 
-              SizedBox(height: 10),
+              SizedBox(height: PSizes.spaceBtwItems),
 
               Row(
                 children: [
@@ -221,7 +224,7 @@ class _OfferScreenState extends State<OfferScreen> {
                     dividerEndIndent: 50,
                     onArrowTap: () {},
                   ),
-                  SizedBox(width: 10),
+                  SizedBox(width: PSizes.spaceBtwItems),
 
                   // Reviews
                   PInfoCard(
@@ -234,7 +237,7 @@ class _OfferScreenState extends State<OfferScreen> {
                     color: Colors.blueGrey.shade300,
                     onArrowTap: () {},
                   ),
-                  SizedBox(width: 10),
+                  SizedBox(width: PSizes.spaceBtwItems),
 
                   // Reservation
                   PInfoCard(
@@ -250,7 +253,7 @@ class _OfferScreenState extends State<OfferScreen> {
                 ],
               ),
 
-              SizedBox(height: 10),
+              SizedBox(height: PSizes.spaceBtwItems),
 
               // Clients
               Container(
@@ -259,10 +262,12 @@ class _OfferScreenState extends State<OfferScreen> {
                 decoration: BoxDecoration(color: PAppColors.black900),
                 child: Column(
                   children: [
-                    SizedBox(height: 30),
+                    SizedBox(height: PSizes.spaceBtwItems),
 
                     Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 16),
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: PSizes.md,
+                      ),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -277,11 +282,11 @@ class _OfferScreenState extends State<OfferScreen> {
                                 ),
                               ),
 
-                              SizedBox(height: 20),
+                              SizedBox(height: PSizes.spaceBtwItems),
 
                               Image.asset(PImages.curve, height: 15, width: 55),
 
-                              SizedBox(height: 20),
+                              SizedBox(height: PSizes.spaceBtwItems),
 
                               Text(
                                 "42",
@@ -301,10 +306,10 @@ class _OfferScreenState extends State<OfferScreen> {
                               ),
                             ],
                           ),
-
+                          SizedBox(width: PSizes.spaceBtwItems),
                           Container(
                             height: 108,
-                            width: 285,
+                            width: 220,
                             decoration: BoxDecoration(
                               color: Colors.green,
                               borderRadius: BorderRadius.circular(8),
@@ -314,7 +319,7 @@ class _OfferScreenState extends State<OfferScreen> {
                       ),
                     ),
 
-                    SizedBox(height: 15),
+                    SizedBox(height: PSizes.spaceBtwItems),
 
                     Container(
                       height: 82,
@@ -328,111 +333,10 @@ class _OfferScreenState extends State<OfferScreen> {
 
               SizedBox(height: 10),
 
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Container(
-                    height: 300,
-                    width: 185,
-                    decoration: BoxDecoration(color: PAppColors.black900),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.symmetric(
-                            horizontal: 16,
-                            vertical: 8,
-                          ),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                "Customers by age",
-                                style: TextStyle(
-                                  color: PAppColors.white,
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w500,
-                                ),
-                              ),
-                              Image.asset(PImages.curve, height: 35, width: 75),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-
-                  Container(
-                    height: 300,
-                    width: 185,
-                    decoration: BoxDecoration(color: PAppColors.black900),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.symmetric(
-                            horizontal: 16,
-                            vertical: 8,
-                          ),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                "Customers by age",
-                                style: TextStyle(
-                                  color: PAppColors.white,
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w500,
-                                ),
-                              ),
-                              Image.asset(PImages.curve, height: 35, width: 75),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-
+              const CustomersChartRow(),
               SizedBox(height: 10),
 
-              Container(
-                height: 286,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  color: PAppColors.black900,
-                  borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(35),
-                    bottomRight: Radius.circular(35),
-                  ),
-                ),
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 16,
-                        vertical: 8,
-                      ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            "Numbers the clients par hours",
-                            style: TextStyle(
-                              color: PAppColors.white,
-                              fontSize: 16,
-                              fontWeight: FontWeight.w500,
-                            ),
-                          ),
-                          Image.asset(PImages.curve, height: 35, width: 75),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+              const ClientsPerHourChart(),
 
               SizedBox(height: 120),
             ],
@@ -442,3 +346,51 @@ class _OfferScreenState extends State<OfferScreen> {
     );
   }
 }
+
+Widget _legend(String label, Color color, String percent) {
+  return Padding(
+    padding: const EdgeInsets.only(top: 4),
+    child: Row(
+      children: [
+        Container(
+          height: 10,
+          width: 10,
+          decoration: BoxDecoration(
+            color: color,
+            borderRadius: BorderRadius.circular(3),
+          ),
+        ),
+        const SizedBox(width: 6),
+        Expanded(
+          child: Text(
+            label,
+            style: const TextStyle(
+              color: Colors.white70,
+              fontSize: 10,
+              fontWeight: FontWeight.w500,
+            ),
+          ),
+        ),
+        Text(
+          percent,
+          style: const TextStyle(
+            color: Colors.white,
+            fontSize: 11,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ],
+    ),
+  );
+}
+
+
+
+
+
+
+
+
+
+
+

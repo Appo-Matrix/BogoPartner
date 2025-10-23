@@ -4,6 +4,7 @@ import 'package:partner_app/core/utils/constants/app_colors.dart';
 import 'package:partner_app/core/utils/constants/app_styles.dart';
 import 'package:partner_app/features/second_dashboard/shop/widgets/shop_items.dart';
 import '../../../core/utils/common/bogo_app_bar.dart';
+import '../../../core/utils/constants/app_sizes.dart';
 
 class ShopScreen extends StatefulWidget {
   const ShopScreen({super.key});
@@ -23,18 +24,19 @@ class _ShopScreenState extends State<ShopScreen> {
     return Scaffold(
       backgroundColor: PAppColors.black1000,
 
-      // App Bar
+      // 🔹 Custom App Bar
       appBar: const BogoAppBar(
         title: "Shop",
         showTitle: true,
         showBackIcon: true,
       ),
 
-      // Body
-      body: Padding(
+      // 🔹 Scrollable Body
+      body: SingleChildScrollView(
         padding: const EdgeInsets.symmetric(horizontal: 16),
         child: Column(
           children: [
+            // Top card container
             Container(
               height: 239,
               width: double.infinity,
@@ -46,6 +48,7 @@ class _ShopScreenState extends State<ShopScreen> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+                  // Image 1
                   Container(
                     height: 95,
                     width: 165,
@@ -58,9 +61,9 @@ class _ShopScreenState extends State<ShopScreen> {
                     ),
                   ),
 
-                  SizedBox(height: 8),
+                  const SizedBox(height: 8),
 
-                  // Scanner
+                  // Scanner section
                   Container(
                     height: 95,
                     width: 165,
@@ -76,7 +79,7 @@ class _ShopScreenState extends State<ShopScreen> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              SizedBox(height: 8),
+                              const SizedBox(height: 8),
 
                               Image.asset(
                                 PImages.logos,
@@ -84,7 +87,7 @@ class _ShopScreenState extends State<ShopScreen> {
                                 width: 65,
                               ),
 
-                              SizedBox(height: 20),
+                              const SizedBox(height: 20),
 
                               Text(
                                 "TAKE THE CODE",
@@ -97,7 +100,7 @@ class _ShopScreenState extends State<ShopScreen> {
                             ],
                           ),
 
-                          VerticalDivider(
+                          const VerticalDivider(
                             color: Colors.black,
                             thickness: 1,
                             width: 10,
@@ -112,8 +115,9 @@ class _ShopScreenState extends State<ShopScreen> {
               ),
             ),
 
-            SizedBox(height: 15),
+            const SizedBox(height: PSizes.spaceBtwItems),
 
+            // Section 1
             Text(
               "NFC card to accept offers (+Qr code )",
               style: PAppStyles.poppins(
@@ -121,9 +125,10 @@ class _ShopScreenState extends State<ShopScreen> {
                 fontSize: 19,
                 weight: FontWeight.w600,
               ),
+              textAlign: TextAlign.center,
             ),
 
-            SizedBox(height: 10),
+            const SizedBox(height: PSizes.spaceBtwItems),
 
             ShopItems(
               assetPath: PImages.payments,
@@ -131,28 +136,32 @@ class _ShopScreenState extends State<ShopScreen> {
               buttonColor: Colors.amber,
             ),
 
-            SizedBox(height: 15),
+            const SizedBox(height: 25),
 
+            // Section 2
             Image.asset(PImages.scanMe),
 
-            SizedBox(height: 15),
+            const SizedBox(height: PSizes.spaceBtwSections),
 
             Text(
-              "NFC card to accept offers (+Qr code )",
+              "NFC stand to accept offers (+Qr code )",
               style: PAppStyles.poppins(
                 color: PAppColors.white,
                 fontSize: 19,
                 weight: FontWeight.w600,
               ),
+              textAlign: TextAlign.center,
             ),
 
-            SizedBox(height: 10),
+            const SizedBox(height: PSizes.spaceBtwItems),
 
             ShopItems(
               assetPath: PImages.payments,
               buttonText: "Buy",
               buttonColor: Colors.amber,
             ),
+
+            const SizedBox(height: 150),
           ],
         ),
       ),
