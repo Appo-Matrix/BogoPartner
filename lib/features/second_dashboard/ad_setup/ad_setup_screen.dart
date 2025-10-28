@@ -57,62 +57,64 @@ class _AdSetupScreenState extends State<AdSetupScreen> {
       ),
 
       // Body
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16.0),
-        child: Column(
-          children: [
-            // Cards Row
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                AdSetupCard(
-                  bottomText: "Step One",
-                  isSelected: selectedIndex == 0,
-                  onTap: () {
-                    setState(() {
-                      selectedIndex = 0;
-                    });
-                  },
-                ),
-                DoubleCircleWidget(
-                  outerSize: 30,
-                  innerSize: 20,
-                  outerColor: PAppColors.white,
-                  innerColor: PAppColors.black800,
-                ),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16.0),
+          child: Column(
+            children: [
+              // Cards Row
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  AdSetupCard(
+                    bottomText: "Step One",
+                    isSelected: selectedIndex == 0,
+                    onTap: () {
+                      setState(() {
+                        selectedIndex = 0;
+                      });
+                    },
+                  ),
+                  DoubleCircleWidget(
+                    outerSize: 30,
+                    innerSize: 20,
+                    outerColor: PAppColors.white,
+                    innerColor: PAppColors.black800,
+                  ),
 
-                PShortDottedDivider(
-                  color: Colors.grey,
-                  height: 2,
-                  dashWidth: 4,
-                  dashGap: 4,
-                  totalWidth: 50,
-                ),
+                  PShortDottedDivider(
+                    color: Colors.grey,
+                    height: 2,
+                    dashWidth: 4,
+                    dashGap: 4,
+                    totalWidth: 50,
+                  ),
 
-                DoubleCircleWidget(
-                  outerSize: 30,
-                  innerSize: 20,
-                  outerColor: PAppColors.white,
-                  innerColor: PAppColors.black800,
-                ),
+                  DoubleCircleWidget(
+                    outerSize: 30,
+                    innerSize: 20,
+                    outerColor: PAppColors.white,
+                    innerColor: PAppColors.black800,
+                  ),
 
-                AdSetupCard(
-                  bottomText: "Step Two",
-                  isSelected: selectedIndex == 1,
-                  onTap: () {
-                    setState(() {
-                      selectedIndex = 1;
-                    });
-                  },
-                ),
-              ],
-            ),
+                  AdSetupCard(
+                    bottomText: "Step Two",
+                    isSelected: selectedIndex == 1,
+                    onTap: () {
+                      setState(() {
+                        selectedIndex = 1;
+                      });
+                    },
+                  ),
+                ],
+              ),
 
-            const SizedBox(height: 30),
+              const SizedBox(height: 30),
 
-            // Dynamic Content
-            getSelectedWidget(),
-          ],
+              // Dynamic Content
+              getSelectedWidget(),
+            ],
+          ),
         ),
       ),
     );

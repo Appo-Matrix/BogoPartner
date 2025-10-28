@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:partner_app/core/utils/constants/app_colors.dart';
-import 'package:partner_app/features/second_dashboard/mdify_reservation/widgets/adults_count.dart';
-import 'package:partner_app/features/second_dashboard/mdify_reservation/widgets/custom_textfield.dart';
-import 'package:partner_app/features/second_dashboard/mdify_reservation/widgets/floating_confirm_button.dart';
-import 'package:partner_app/features/second_dashboard/mdify_reservation/widgets/mini_calendar_bar.dart';
-import 'package:partner_app/features/second_dashboard/mdify_reservation/widgets/time_wheel_picker.dart';
+import 'package:partner_app/features/second_dashboard/modify_reservation/widgets/adults_count.dart';
+import 'package:partner_app/features/second_dashboard/modify_reservation/widgets/custom_textfield.dart';
+import 'package:partner_app/features/second_dashboard/modify_reservation/widgets/floating_confirm_button.dart';
+import 'package:partner_app/features/second_dashboard/modify_reservation/widgets/mini_calendar_bar.dart';
+import 'package:partner_app/features/second_dashboard/modify_reservation/widgets/time_wheel_picker.dart';
 import '../../../core/utils/common/bogo_app_bar.dart';
 import '../../../core/utils/constants/app_assets.dart';
 import '../../business_details_form/widgets/form_tile.dart';
@@ -27,7 +27,7 @@ class _ModifyReservationScreenState extends State<ModifyReservationScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: PAppColors.black1000,
-      
+
       // App Bar
       appBar: const BogoAppBar(
         title: "Modify",

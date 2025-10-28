@@ -133,4 +133,10 @@ class PImages {
   static const String homePage = "assets/images/home.png";
   static const String store = "assets/images/store.png";
   static const String info = "assets/icons/info.png";
+  static const String duration = "assets/images/duration.png";
+  static const String target = "assets/images/target.png";
+  static const String suggestion = "assets/images/suggestion.png";
+  static const String location = "assets/icons/location.png";
+  static const String pizzaKing = "assets/images/pizaa.png";
+  static const String gallary = "assets/icons/gallary.png";
 }

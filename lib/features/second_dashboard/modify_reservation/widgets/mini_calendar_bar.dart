@@ -62,7 +62,6 @@ class _MiniCalendarBarState extends State<MiniCalendarBar> {
         : DateFormat('MMMM yyyy').format(_selected);
 
     return Container(
-      width: w,
       height: h,
       decoration: BoxDecoration(
         color: PAppColors.black900,
