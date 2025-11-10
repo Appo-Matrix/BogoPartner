@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../core/utils/constants/app_colors.dart';
 import 'custom_themes/app_bar_theme.dart';
 import 'custom_themes/bottom_sheet_theme.dart';
