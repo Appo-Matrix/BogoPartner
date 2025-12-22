@@ -161,7 +161,7 @@ class _ShopScreenState extends State<ShopScreen> {
               buttonColor: Colors.amber,
             ),
 
-            const SizedBox(height: 150),
+            const SizedBox(height: PSizes.spaceBtwSections),
           ],
         ),
       ),

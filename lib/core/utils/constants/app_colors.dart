@@ -182,6 +182,15 @@ class PAppColors {
   static const Color gray800 = Color(0xFF182230);
   static const Color gray900 = Color(0xFF101828);
 
+
+  static const Color darkGray760 = Color(0xFF111111);
+  static const Color darkGray770=Color(0xFF2A2A2A);
+  static const Color darkGray780=Color(0xFF1E1E1E);
+  static const Color yellow1=Color(0xFFFFC107);
+  static const Color purple=Color(0xFF6A1B9A);
+  static const Color orange1=Color(0xFFF4511E);
+  static const Color yellow2 =Color(0xFFF9A825);
+
   /// ─────────────────────────────
   /// Extended Dark Grays
   /// ─────────────────────────────

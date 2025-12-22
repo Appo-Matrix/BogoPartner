@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:partner_app/core/utils/constants/app_colors.dart';
 import 'package:partner_app/core/utils/constants/app_styles.dart';
 
+import '../../../../core/utils/constants/app_sizes.dart';
+
 class InfoStatTile extends StatelessWidget {
   final String title;
   final String numberText;
@@ -22,8 +24,8 @@ class InfoStatTile extends StatelessWidget {
       children: [
         // Image container with background color
         Container(
-          height: 46,
-          width: 46,
+          height: 40,
+          width: 40,
           decoration: BoxDecoration(
             color: assetBackgroundColor,
             borderRadius: BorderRadius.circular(18),
@@ -31,13 +33,13 @@ class InfoStatTile extends StatelessWidget {
           child: Center(
             child: Image.asset(
               assetPath,
-              height: 35,
-              width: 35,
+              height: 30,
+              width: 30,
               fit: BoxFit.contain,
             ),
           ),
         ),
-        const SizedBox(width: 12),
+        const SizedBox(width: PSizes.sm),
 
         // Text + number column
         Column(
@@ -48,7 +50,7 @@ class InfoStatTile extends StatelessWidget {
               title,
               style: PAppStyles.poppins(
                 color: PAppColors.white,
-                fontSize: 16,
+                fontSize: 14,
                 weight: FontWeight.w600,
               ),
             ),
