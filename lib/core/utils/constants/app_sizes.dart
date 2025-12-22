@@ -51,6 +51,20 @@ class PSizes {
   static const double paragraphSpacing = 1.2;
   static const double paragraphSpacingLg = 1.25;
   static const double paragraphSpacingLgx = 1.3;
+  static const double mi1=122.0;
+  static const double mi2=76.0;
+  static const double mi3=28.0;
+  static const double mi4=92.0;
+  static const double mi5=20.0;
+  static const double mi6=35.0;
+  static const double mi7=36.0;
+  static const double mi8=30.0;
+  static const double mi9=15.0;
+  static const double mi10=125.0;
+  static const double mi11=40.0;
+  static const double mi12=2.5;
+  static const double mi13=155;
+  static const double mi14=49;
 
   // TextField Size
   static const double textFieldHeight = 75;

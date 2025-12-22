@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:partner_app/core/utils/constants/app_assets.dart';
 import 'package:partner_app/core/utils/constants/app_colors.dart';
+import '../../../../core/utils/constants/app_sizes.dart';
 import '../../active_subscription/widgets/dotted_divider.dart';
 import 'action_button_card.dart';
 import 'custom_date_row.dart';
@@ -48,17 +49,17 @@ class _ReservationWidgetState extends State<ReservationWidget> {
                     "I ask you to prepare an extra bed for my young child",
               ),
 
-              SizedBox(height: 15),
+              SizedBox(height: PSizes.spaceBtwItems),
 
               // Divider
               PDottedDivider(
                 color: PAppColors.black800,
                 height: 3,
-                dashWidth: 12,
+                dashWidth: 10,
                 dashGap: 10,
               ),
 
-              SizedBox(height: 15),
+              SizedBox(height: PSizes.spaceBtwItems),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 16.0),
                 child: Row(
@@ -85,8 +86,7 @@ class _ReservationWidgetState extends State<ReservationWidget> {
                   ],
                 ),
               ),
-
-              Spacer(),
+SizedBox(height: PSizes.spaceBtwItems,),
               CustomDateRow(
                 leftAsset: PImages.date,
                 leftText: "18/06/2023",
@@ -97,7 +97,7 @@ class _ReservationWidgetState extends State<ReservationWidget> {
             ],
           ),
         ),
-        SizedBox(height: 15),
+        SizedBox(height: PSizes.spaceBtwSections),
 
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,

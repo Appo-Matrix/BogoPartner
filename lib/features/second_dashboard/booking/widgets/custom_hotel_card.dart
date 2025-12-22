@@ -20,7 +20,8 @@ class CustomHotelCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 92,
-      width: 353,
+      width:320 ,
+
       decoration: BoxDecoration(
         color: PAppColors.black800,
         borderRadius: BorderRadius.circular(33),
@@ -53,7 +54,7 @@ class CustomHotelCard extends StatelessWidget {
                   title,
                   style: PAppStyles.poppins(
                     color: PAppColors.white,
-                    fontSize: 20,
+                    fontSize: 14,
                     weight: FontWeight.w700,
                   ),
                 ),
@@ -62,7 +63,7 @@ class CustomHotelCard extends StatelessWidget {
                   subtitle,
                   style: PAppStyles.poppins(
                     color: PAppColors.white,
-                    fontSize: 15,
+                    fontSize: 12,
                     weight: FontWeight.w400,
                   ),
                 ),
@@ -76,7 +77,7 @@ class CustomHotelCard extends StatelessWidget {
                   price,
                   style: PAppStyles.poppins(
                     color: PAppColors.main,
-                    fontSize: 20,
+                    fontSize: 14,
                     weight: FontWeight.w900,
                   ),
                 ),

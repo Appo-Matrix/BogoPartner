@@ -17,8 +17,8 @@ class ActionButtonCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 86,
-      width: 120,
+      height: 60,
+      width: 100,
       decoration: BoxDecoration(
         color: backgroundColor,
         borderRadius: BorderRadius.circular(35),
@@ -31,7 +31,7 @@ class ActionButtonCard extends StatelessWidget {
             text,
             style: PAppStyles.poppins(
               color: PAppColors.white,
-              fontSize: 16,
+              fontSize: 14,
               weight: FontWeight.w600,
             ),
           ),

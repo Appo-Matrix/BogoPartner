@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../../../../core/utils/constants/app_colors.dart';
+import '../../../../core/utils/constants/app_sizes.dart';
+
 class DashboardStatCard extends StatelessWidget {
   final String imagePath; // Asset image (icon)
   final String bottomText; // Text below number
@@ -19,43 +22,44 @@ class DashboardStatCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Color backgroundColor =
-    isSelected ? const Color(0xFF8BC255) : const Color(0xFF2B2B2B);
+    isSelected ?  PAppColors.main :   PAppColors.darkGray750;
 
     return GestureDetector(
       onTap: onTap,
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 250),
         height: 92,
-        width: 122,
+        width: 100,
         decoration: BoxDecoration(
           color: backgroundColor,
           borderRadius: BorderRadius.circular(24),
         ),
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 11),
+          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Image.asset(imagePath, height: 48, width: 48),
+                  Image.asset(imagePath, height: 40, width: 40),
                   const Spacer(),
                   Text(
                     numberText,
                     style: const TextStyle(
                       color: Colors.white,
-                      fontSize: 25,
+                      fontSize: 20,
                       fontWeight: FontWeight.w900,
                     ),
                   ),
                 ],
               ),
+              SizedBox(height: PSizes.spaceBtwItems,),
               Text(
                 bottomText,
                 style: const TextStyle(
                   color: Colors.white,
-                  fontSize: 18,
+                  fontSize: 14,
                   fontWeight: FontWeight.w600,
                 ),
                 textAlign: TextAlign.center,

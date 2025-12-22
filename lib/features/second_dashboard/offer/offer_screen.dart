@@ -1,5 +1,5 @@
-import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:partner_app/core/utils/constants/app_assets.dart';
 import 'package:partner_app/core/utils/constants/app_colors.dart';
 import 'package:partner_app/core/utils/constants/app_sizes.dart';
@@ -34,7 +34,9 @@ class _OfferScreenState extends State<OfferScreen> {
           children: [
             SizedBox(width: PSizes.fontSizeMd),
             InkWell(
-              onTap: () {},
+              onTap: () {
+                context.push("/settingScreen");
+              },
               child: Image.asset(PImages.menu, height: 25, width: 25),
             ),
           ],
@@ -47,7 +49,9 @@ class _OfferScreenState extends State<OfferScreen> {
 
               SizedBox(width: 10),
 
-              PRoundedIconButton(assetPath: PImages.scan, onTap: () {}),
+              PRoundedIconButton(assetPath: PImages.scan, onTap: () {
+                context.push('/shopScreen');
+              }),
 
               SizedBox(width: 10),
 

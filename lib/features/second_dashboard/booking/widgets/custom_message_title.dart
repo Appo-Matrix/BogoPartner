@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../core/utils/constants/app_colors.dart';
+import '../../../../core/utils/constants/app_sizes.dart';
 import '../../../../core/utils/constants/app_styles.dart';
 
 class CustomMessageTile extends StatelessWidget {
@@ -24,8 +25,8 @@ class CustomMessageTile extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            height: 45,
-            width: 45,
+            height: 40,
+            width: 40,
             decoration: BoxDecoration(
               color: PAppColors.black1000,
               borderRadius: BorderRadius.circular(28),
@@ -34,10 +35,10 @@ class CustomMessageTile extends StatelessWidget {
               child: Image.asset(asset),
             ),
           ),
-          const Spacer(),
+          SizedBox(width: PSizes.md,),
           Container(
             height: 67,
-            width: 287,
+            width: 250,
             decoration: BoxDecoration(
               color: PAppColors.black1000,
               borderRadius: BorderRadius.circular(18),
@@ -52,7 +53,7 @@ class CustomMessageTile extends StatelessWidget {
                     title,
                     style: PAppStyles.poppins(
                       color: PAppColors.white,
-                      fontSize: 18,
+                      fontSize: 14,
                       weight: FontWeight.w600,
                     ),
                   ),
@@ -61,7 +62,7 @@ class CustomMessageTile extends StatelessWidget {
                     subtitle,
                     style: PAppStyles.poppins(
                       color: PAppColors.white,
-                      fontSize: 13,
+                      fontSize: 12,
                       weight: FontWeight.w400,
                     ),
                   ),
