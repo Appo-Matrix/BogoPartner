@@ -27,8 +27,6 @@ class PInfoCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 154,
-      width: 117,
       decoration: BoxDecoration(
         color: color,
       ),

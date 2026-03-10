@@ -7,6 +7,8 @@ import 'package:partner_app/core/utils/constants/app_styles.dart';
 
 class CustomTextField extends StatefulWidget {
   final String hintText;
+  final Color hintTextColor;
+  final Color fillColor;
   final TextEditingController controller;
   final dynamic prefixIcon;
   final String obscureCharacter;
@@ -15,6 +17,8 @@ class CustomTextField extends StatefulWidget {
 
   const CustomTextField({
     required this.hintText,
+    this.hintTextColor = PAppColors.white,
+    this.fillColor = PAppColors.black800,
     this.prefixIcon,
     required this.controller,
     this.isPassword = false,
@@ -56,7 +60,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
             cursorWidth: PSizes.cursorWidth,
             decoration: InputDecoration(
               filled: true,
-              fillColor: PAppColors.darkGray750,
+              fillColor: widget.fillColor,
               prefixIcon: widget.prefixIcon == null
                   ? Padding(
                       padding: EdgeInsets.symmetric(horizontal: PSizes.xs),
@@ -102,7 +106,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
                   : null,
               hintText: widget.hintText,
               hintStyle: PAppStyles.body.copyWith(
-                color: PAppColors.white,
+                color: widget.hintTextColor,
                 fontSize: PSizes.fontSizeSm,
               ),
               enabledBorder: OutlineInputBorder(

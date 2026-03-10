@@ -6,67 +6,67 @@ class PAnalyticsCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 110,
       width: double.infinity,
       color: Colors.transparent,
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
 
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          _buildMetricCard(
-            color: Colors.deepPurple,
-            title: "Page Views",
-            value: "15",
-            progress: 0.6,
-          ),
+      // 🔥 Horizontal scroll view added
+      child: SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        physics: const BouncingScrollPhysics(), // for smooth scrolling
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            _buildMetricCard(
+              color: Colors.deepPurple,
+              title: "Page Views",
+              value: "15",
+              progress: 0.6,
+            ),
 
-          Container(
-            margin: const EdgeInsets.symmetric(horizontal: 11),
-            width: 1,
-            height: 60,
-            color: Colors.grey.shade800,
-          ),
+            _buildDivider(),
 
-          _buildMetricCard(
-            color: Colors.pinkAccent,
-            title: "Favorite",
-            value: "25",
-            progress: 0.4,
-          ),
+            _buildMetricCard(
+              color: Colors.pinkAccent,
+              title: "Favorite",
+              value: "25",
+              progress: 0.4,
+            ),
 
-          Container(
-            margin: const EdgeInsets.symmetric(horizontal: 11),
-            width: 1,
-            height: 60,
-            color: Colors.grey.shade800,
-          ),
+            _buildDivider(),
 
-          _buildMetricCard(
-            color: Colors.lightBlueAccent,
-            title: "XP Activate",
-            value: "00",
-            progress: 0.3,
-          ),
+            _buildMetricCard(
+              color: Colors.lightBlueAccent,
+              title: "XP Activate",
+              value: "00",
+              progress: 0.3,
+            ),
 
-          Container(
-            margin: const EdgeInsets.symmetric(horizontal: 11),
-            width: 1,
-            height: 60,
-            color: Colors.grey.shade800,
-          ),
+            _buildDivider(),
 
-          _buildMetricCard(
-            color: Colors.orangeAccent,
-            title: "Loyalty Activate",
-            value: "02",
-            progress: 0.5,
-          ),
-        ],
+            _buildMetricCard(
+              color: Colors.orangeAccent,
+              title: "Loyalty Activate",
+              value: "02",
+              progress: 0.5,
+            ),
+          ],
+        ),
       ),
     );
   }
 
+  // Divider between metrics
+  Widget _buildDivider() {
+    return Container(
+      margin: const EdgeInsets.symmetric(horizontal: 11),
+      width: 1,
+      height: 60,
+      color: Colors.grey.shade800,
+    );
+  }
+
+  // Metric item
   Widget _buildMetricCard({
     required Color color,
     required String title,
@@ -98,7 +98,6 @@ class PAnalyticsCard extends StatelessWidget {
           ],
         ),
         const SizedBox(height: 8),
-
         Text(
           value,
           style: const TextStyle(
@@ -108,7 +107,6 @@ class PAnalyticsCard extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 6),
-
         SizedBox(
           width: 65,
           child: ClipRRect(

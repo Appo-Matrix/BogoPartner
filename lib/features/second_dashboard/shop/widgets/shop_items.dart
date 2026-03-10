@@ -36,78 +36,83 @@ class _ShopItemsState extends State<ShopItems> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Container(
-              height: 92,
-              width: 185,
-              decoration: BoxDecoration(
-                color: PAppColors.black800,
-                borderRadius: BorderRadius.circular(35),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  InkWell(
-                    onTap: _increment,
-                    child: const Icon(
-                      Icons.keyboard_arrow_up,
-                      color: Colors.white,
-                    ),
-                  ),
-                  const SizedBox(width: 20),
-                  Text(
-                    count.toString().padLeft(2, '0'),
-                    style: PAppStyles.poppins(
-                      color: PAppColors.white,
-                      fontSize: PSizes.fontSizeMd,
-                      weight: FontWeight.w600,
-                    ),
-                  ),
-                  const SizedBox(width: 20),
-                  InkWell(
-                    onTap: _decrement,
-                    child: const Icon(
-                      Icons.keyboard_arrow_down,
-                      color: Colors.white,
-                    ),
-                  ),
-                ],
-              ),
-            ),
+    final screenWidth = MediaQuery.of(context).size.width;
+    final itemWidth = (screenWidth - 48) / 2; // padding-aware responsive width
 
-            Container(
-              height: 92,
-              width: 185,
-              decoration: BoxDecoration(
-                color: widget.buttonColor,
-                borderRadius: BorderRadius.circular(35),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  const SizedBox(width: 28),
-                  Image.asset(widget.assetPath, height: 40, width: 40),
-                  const SizedBox(width: 15),
-                  Text(
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 8.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          // 🔹 Counter Box
+          Container(
+            height: 92,
+            width: itemWidth,
+            decoration: BoxDecoration(
+              color: PAppColors.black800,
+              borderRadius: BorderRadius.circular(35),
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                InkWell(
+                  onTap: _increment,
+                  borderRadius: BorderRadius.circular(50),
+                  child: const Icon(Icons.keyboard_arrow_up, color: Colors.white),
+                ),
+                const SizedBox(width: 16),
+                Text(
+                  count.toString().padLeft(2, '0'),
+                  style: PAppStyles.poppins(
+                    color: PAppColors.white,
+                    fontSize: PSizes.fontSizeMd,
+                    weight: FontWeight.w600,
+                  ),
+                ),
+                const SizedBox(width: 16),
+                InkWell(
+                  onTap: _decrement,
+                  borderRadius: BorderRadius.circular(50),
+                  child: const Icon(Icons.keyboard_arrow_down, color: Colors.white),
+                ),
+              ],
+            ),
+          ),
+
+          // 🔹 Buy Button
+          Container(
+            height: 92,
+            width: itemWidth,
+            decoration: BoxDecoration(
+              color: widget.buttonColor,
+              borderRadius: BorderRadius.circular(35),
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Image.asset(
+                  widget.assetPath,
+                  height: 36,
+                  width: 36,
+                  fit: BoxFit.contain,
+                ),
+                const SizedBox(width: 10),
+                Flexible(
+                  child: Text(
                     widget.buttonText,
                     style: PAppStyles.poppins(
                       color: PAppColors.white,
-                      fontSize: 20,
-                      weight: FontWeight.w900,
+                      fontSize: 18,
+                      weight: FontWeight.w800,
                     ),
                     overflow: TextOverflow.ellipsis,
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
-          ],
-        ),
-      ],
+          ),
+        ],
+      ),
     );
   }
 }

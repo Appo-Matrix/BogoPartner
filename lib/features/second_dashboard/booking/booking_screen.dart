@@ -38,7 +38,7 @@ class _BookingScreenState extends State<BookingScreen> {
 
       // App Bar
       appBar: BogoAppBar(
-        title: "Client Details",
+        title: "Reservation",
         showTitle: true,
         showBackIcon: true,
         showActions: true,

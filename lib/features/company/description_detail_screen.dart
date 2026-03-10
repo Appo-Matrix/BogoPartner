@@ -181,7 +181,7 @@ class _DescriptionDetailScreenState extends State<DescriptionDetailScreen> {
               text: 'Continue',
               borderRadius: PSizes.fontSizeUMdLg,
               onTap: () {
-                context.push('/addOptionScreen');
+                context.push('/secondDashboardScreen');
               },
             ),
           ],
