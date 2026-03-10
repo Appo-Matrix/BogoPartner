@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:partner_app/features/second_dashboard/booking/booking_screen.dart';
 import 'package:partner_app/features/second_dashboard/payment/payments_screen.dart';
-import 'package:partner_app/features/second_dashboard/setting/setting_screen.dart';
-import 'package:partner_app/features/second_dashboard/shop/shop_screen.dart';
 import 'package:partner_app/features/second_dashboard/widgets/bogo_bottom_nav_bar.dart';
 import '../../core/utils/constants/app_assets.dart';
 import '../../core/utils/constants/app_colors.dart';
-import 'mdify_reservation/modify_reservation_screen.dart';
+import 'modify_reservation/modify_reservation_screen.dart';
 import 'offer/offer_screen.dart';
 
 class SecondDashboardScreen extends StatefulWidget {

@@ -150,7 +150,6 @@ class PImages {
   static const String homePage = "assets/images/home.png";
   static const String store = "assets/images/store.png";
   static const String info2 = "assets/icons/info.png";
-  static const String info = "assets/icons/info.png";
   static const String duration = "assets/images/duration.png";
   static const String target = "assets/images/target.png";
   static const String suggestion = "assets/images/suggestion.png";
